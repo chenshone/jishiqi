@@ -1,16 +1,10 @@
 <!--pages/new/new.wxml-->
 <view class="container">
 	<view class="date-box">
-		<text class="mouth-day">
-			5月5日
-		</text>
+		<text class="mouthDay">5月5日</text>
 		<view class="year-week-box">
-			<text class="year">
-				2019
-			</text>
-			<text class="week">
-				周日
-			</text>
+			<text class="year">2019</text>
+			<text class="week">周日</text>
 		</view>
 	</view>
 </view>
