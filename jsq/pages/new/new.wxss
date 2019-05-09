@@ -1,0 +1,19 @@
+/* pages/new/new.wxss */
+.date-box{
+	width: 208rpx;
+	height: 110rpx;
+	background-color: #a4a2a2;
+	margin-top: 68rpx;
+	margin-left: 38rpx;
+}
+
+.mouth-day{
+
+	font-family: Segoe UI;
+	font-size: 25px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #ffffff;
+
+
+}
