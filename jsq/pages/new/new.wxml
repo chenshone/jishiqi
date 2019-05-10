@@ -1,10 +1,15 @@
 <!--pages/new/new.wxml-->
 <view class="container">
 	<view class="date-box">
-		<text class="mouthDay">5月5日</text>
+		<text class="mouthDay">{{dateList[i].date}}</text>
 		<view class="year-week-box">
-			<text class="year">2019</text>
-			<text class="week">周日</text>
+			<text class="year">{{dateList[i].year}}</text>
+			<text class="week">{{dateList[i].week}}</text>
 		</view>
 	</view>
+	<view class="line line1"></view>
+	<view class="tips">
+		<text>事项时轴</text>
+	</view>
+	<view class="line lin2"></view>
 </view>
