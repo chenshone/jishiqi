@@ -15,6 +15,9 @@ Page({
   onLoad: function (options) {
 	  this.setData({
 		  dateList:dateObj.dateList,
+		  len:dateObj.dateListLen,
+		  listNum:dateObj.dateListNum,
+		  listNumLen:dateObj.dateListNumLen
 	  })
   },
 

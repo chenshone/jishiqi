@@ -1,22 +1,25 @@
 /* pages/new/new.wxss */
-.date-box{
+.container {
+	padding-left: 38rpx;
+}
+
+.date-box {
 	display: flex;
 	flex-direction: column;
 	width: 208rpx;
 	height: 110rpx;
-	background-color: rgba(164,162,162,0.4);
+	background-color: rgba(164, 162, 162, 0.4);
 	margin-top: 68rpx;
-	margin-left: 38rpx;
 	padding: 0.3125rem;
 	border-radius: 10px;
-}
-
-.mouthDay{
-	font-size: 50rpx;
 	color: #ffffff;
 }
 
-.year-week-box{
+.mouthDay {
+	font-size: 50rpx;
+}
+
+.year-week-box {
 	margin-top: 3px;
 	display: flex;
 	flex-direction: row;
@@ -24,13 +27,13 @@
 	font-size: 30rpx;
 }
 
-.line{
+.line {
 	height: 1px;
-	border:0;
-	background-color: rgba(255,255,255,1);
+	border: 0;
+	background-color: rgba(255, 255, 255, 1);
 }
 
-.tips{
+.tips {
 	width: 112rpx;
 	height: 144rpx;
 	font-family: Segoe UI;
@@ -46,14 +49,72 @@
 	padding: 0.1875rem;
 }
 
-.line1{
+.line1 {
 	width: 506rpx;
-	margin-left: 58rpx;
 	margin-top: 34rpx;
 }
 
-.lin2{
+.lin2 {
 	width: 316rpx;
 	margin-top: 38rpx;
-	margin-left: 374rpx;
+	margin-left: 336rpx;
+}
+
+.zhou {
+	margin-top: 22rpx;
+}
+
+.zhou-img {
+	width: 660rpx;
+	height: 58rpx;
+}
+
+.to-do {
+	color: #ffffff;
+	display: flex;
+}
+
+.to-word {
+	width: 80rpx;
+	height: auto;
+}
+
+.todoNum {
+	display: flex;
+	width: 26px;
+	height: auto;
+	font-family: Segoe UI;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 27px;
+	letter-spacing: 0px;
+	align-items: center;
+	justify-content: center;
+}
+
+.todoDetails{
+	position: absolute;
+	top: 354rpx;
+	right: 58rpx;
+	font-family: Segoe UI;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 30rpx;
+	letter-spacing: 0px;
+	color: #ffffff;
+	display: flex;
+}
+
+.todoDetails-word{
+	margin-right: 40rpx;
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+}
+
+.todoDetails-num{
+	display: flex;
+	flex-direction: column;
 }

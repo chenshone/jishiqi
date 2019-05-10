@@ -1,10 +1,10 @@
 <!--pages/new/new.wxml-->
 <view class="container">
 	<view class="date-box">
-		<text class="mouthDay">{{dateList[i].date}}</text>
+		<text class="mouthDay">{{dateList[len-1].date}}</text>
 		<view class="year-week-box">
-			<text class="year">{{dateList[i].year}}</text>
-			<text class="week">{{dateList[i].week}}</text>
+			<text class="year">{{dateList[len-1].year}}</text>
+			<text class="week">{{dateList[len-1].week}}</text>
 		</view>
 	</view>
 	<view class="line line1"></view>
@@ -12,4 +12,29 @@
 		<text>事项时轴</text>
 	</view>
 	<view class="line lin2"></view>
+	<view class="zhou">
+		<image src="../../images/new/组%2029.png" class="zhou-img"></image>
+	</view>
+	<view class="to-do">
+		<view class="to-word">
+			<text>今日待办</text>
+		</view>
+		<view class="todoNum">
+		<text>: {{listNum[listNumLen-1].allNum}}</text>
+		</view>
+	</view>
+	<view class="todoDetails">
+		<view class="todoDetails-word">
+			<text>极其重要</text>
+			<text>重要</text>
+			<text>一般</text>
+			<text>休闲</text>
+		</view>
+		<view class="todoDetails-num">
+			<text>{{listNum[listNumLen-1].aNum}}</text>
+			<text>{{listNum[listNumLen-1].bNum}}</text>
+			<text>{{listNum[listNumLen-1].cNum}}</text>
+			<text>{{listNum[listNumLen-1].dNum}}</text>
+		</view>
+	</view>
 </view>
