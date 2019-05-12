@@ -37,4 +37,8 @@
 			<text>{{listNum[listNumLen-1].dNum}}</text>
 		</view>
 	</view>
+	<scroll-view class="content" scroll-y="true">
+		<block wx:for = "{{dateList[len-1]}}" wx:for-index = "index">
+		</block>
+	</scroll-view>
 </view>

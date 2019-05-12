@@ -1,0 +1,8 @@
+.now-notes{
+	width: 282rpx;
+	height: 206rpx;
+	background-image: linear-gradient(0deg, 
+		#ff3300 0%, 
+		#ffa710 100%);
+	border-radius: 10px 10px 10px 5px;
+}
