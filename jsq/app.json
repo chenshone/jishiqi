@@ -1,8 +1,9 @@
 {
-  "pages":[
+  "pages": [
     "pages/new/new"
   ],
-  "window":{
-		"navigationBarBackgroundColor": "#ECC0A8"
-  }
+  "window": {
+    "navigationBarBackgroundColor": "#ECC0A8"
+  },
+  "sitemapLocation": "sitemap.json"
 }

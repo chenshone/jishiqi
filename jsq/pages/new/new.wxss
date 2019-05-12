@@ -1,4 +1,5 @@
 /* pages/new/new.wxss */
+@import "new-item/new-item-tpl.wxss";
 .container {
 	padding-left: 38rpx;
 	padding: 68rpx 38rpx 0 38rpx;
@@ -123,4 +124,15 @@
 	height: 640rpx;
 	white-space: nowrap;
 	border: 1px solid #ffffff;
+	width: 650rpx;
+}
+
+.middle{
+	width: 100%;
+	text-align: center;
+}
+
+.middle-img{
+	width: 48rpx;
+	height: 56rpx;
 }

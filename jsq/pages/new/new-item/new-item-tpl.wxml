@@ -1,13 +1,42 @@
-<template name="newItemTpl">
-	<view class="new-notes-view view-left" wx:if="{{parseInt(index+1/2)==0}}">
-		<view class="new-notes style1" wx:if="{{things[index].level==1}}">
+<template name="newItemTpl-1">
+	
+		<view class="line-short-left"></view>
+		<view class="new-notes style1" wx:if="{{level==1}}">
 			<view class="new-notes-header">
-				<view class="new-notes-header-time">{{things[index].time}}</view>
-				<view class="new-notes-header-circle local-right" wx:if="{{parseInt(index+1/2)==0}}"></view>
-				<view class="new-notes-header-circle local-left" wx:if="{{parseInt(index+1/2)==1}}"></view>
+				<view class="new-notes-header-circle"></view>
+				<view class="new-notes-header-time">{{time}}  {{title}}</view>
 			</view>
 			<view class="new-notes-content">
-				<text class="new-notes-content-txt">{{things[index].content}}</text>
+				<text>{{content}}</text>
+			</view>
+			<view class="new-notes-footer">
+				<view class="new-notes-footer-start">
+					<text class="new-notes-footer-start-word">
+						距离开始还有 
+					</text>
+					<text class="new-notes-footer-start-countdown">
+						 0天3小时5分
+					</text>
+				</view>
+
+				<view class="new-notes-footer-end">
+					<text class="new-notes-footer-end-word">
+						距离结束还有
+					</text>
+					<text class="new-notes-footer-end-countdown">
+						未开始
+					</text>
+				</view>
+			</view>
+		</view>
+
+		<view class="new-notes style2" wx:elif="{{level==2}}">
+			<view class="new-notes-header">
+				<view class="new-notes-header-circle"></view>
+				<view class="new-notes-header-time">{{time}}   {{title}}</view>
+			</view>
+			<view class="new-notes-content">
+				<text class="new-notes-content-txt">{{content}}</text>
 			</view>
 			<view class="new-notes-footer">
 				<view class="new-notes-footer-start">
@@ -30,17 +59,14 @@
 
 			</view>
 		</view>
-	</view>
 
-	<view class="new-notes-view view-left" wx:if="{{parseInt(index+1/2)==0}}">
-		<view class="new-notes style1" wx:if="{{things[index].level==1}}">
+		<view class="new-notes style3" wx:elif="{{level==3}}">
 			<view class="new-notes-header">
-				<view class="new-notes-header-time">{{things[index].time}}</view>
-				<view class="new-notes-header-circle local-right" wx:if="{{parseInt(index+1/2)==0}}"></view>
-				<view class="new-notes-header-circle local-left" wx:if="{{parseInt(index+1/2)==1}}"></view>
+				<view class="new-notes-header-circle"></view>
+				<view class="new-notes-header-time">{{time}}   {{title}}</view>
 			</view>
 			<view class="new-notes-content">
-				<text class="new-notes-content-txt">{{things[index].content}}</text>
+				<text class="new-notes-content-txt">{{content}}</text>
 			</view>
 			<view class="new-notes-footer">
 				<view class="new-notes-footer-start">
@@ -63,99 +89,159 @@
 
 			</view>
 		</view>
-	</view>
 
-	<view class="new-notes style2" wx:elif="{{things[index].level==2}}">
-		<view class="new-notes-header">
-			<view class="new-notes-header-time">{{things[index].time}}</view>
-			<view class="new-notes-header-circle local-right" wx:if="{{parseInt(index+1/2)==0}}"></view>
-			<view class="new-notes-header-circle local-left" wx:if="{{parseInt(index+1/2)==1}}"></view>
-		</view>
-		<view class="new-notes-content">
-			<text class="new-notes-content-txt">{{things[index].content}}</text>
-		</view>
-		<view class="new-notes-footer">
-			<view class="new-notes-footer-start">
-				<text class="new-notes-footer-start-word">
-					距离开始还有
-				</text>
-				<text class="new-notes-footer-start-countdown">
-					0天3小时5分
-				</text>
+		<view class="new-notes style4" wx:else>
+			<view class="new-notes-header">
+				<view class="new-notes-header-circle"></view>
+				<view class="new-notes-header-time">{{time}}  {{title}}</view>
 			</view>
-
-			<view class="new-notes-footer-end">
-				<text class="new-notes-footer-end-word">
-					距离结束还有
-				</text>
-				<text class="new-notes-footer-end-countdown">
-					未开始
-				</text>
+			<view class="new-notes-content">
+				<text class="new-notes-content-txt">{{content}}</text>
 			</view>
+			<view class="new-notes-footer">
+				<view class="new-notes-footer-start">
+					<text class="new-notes-footer-start-word">
+						距离开始还有
+					</text>
+					<text class="new-notes-footer-start-countdown">
+						0天3小时5分
+					</text>
+				</view>
 
-		</view>
-	</view>
-
-	<view class="new-notes style3" wx:elif="{{things[index].level==3}}">
-		<view class="new-notes-header">
-			<view class="new-notes-header-time">{{things[index].time}}</view>
-			<view class="new-notes-header-circle local-right" wx:if="{{parseInt(index+1/2)==0}}"></view>
-			<view class="new-notes-header-circle local-left" wx:if="{{parseInt(index+1/2)==1}}"></view>
-		</view>
-		<view class="new-notes-content">
-			<text class="new-notes-content-txt">{{things[index].content}}</text>
-		</view>
-		<view class="new-notes-footer">
-			<view class="new-notes-footer-start">
-				<text class="new-notes-footer-start-word">
-					距离开始还有
-				</text>
-				<text class="new-notes-footer-start-countdown">
-					0天3小时5分
-				</text>
+				<view class="new-notes-footer-end">
+					<text class="new-notes-footer-end-word">
+						距离结束还有
+					</text>
+					<text class="new-notes-footer-end-countdown">
+						未开始
+					</text>
+				</view>
 			</view>
-
-			<view class="new-notes-footer-end">
-				<text class="new-notes-footer-end-word">
-					距离结束还有
-				</text>
-				<text class="new-notes-footer-end-countdown">
-					未开始
-				</text>
-			</view>
-
 		</view>
-	</view>
-
-	<view class="new-notes style4" wx:else>
-		<view class="new-notes-header">
-			<view class="new-notes-header-time">{{things[index].time}}</view>
-			<view class="new-notes-header-circle local-right" wx:if="{{parseInt(index+1/2)==0}}"></view>
-			<view class="new-notes-header-circle local-left" wx:if="{{parseInt(index+1/2)==1}}"></view>
-		</view>
-		<view class="new-notes-content">
-			<text class="new-notes-content-txt">{{things[index].content}}</text>
-		</view>
-		<view class="new-notes-footer">
-			<view class="new-notes-footer-start">
-				<text class="new-notes-footer-start-word">
-					距离开始还有
-				</text>
-				<text class="new-notes-footer-start-countdown">
-					0天3小时5分
-				</text>
-			</view>
-
-			<view class="new-notes-footer-end">
-				<text class="new-notes-footer-end-word">
-					距离结束还有
-				</text>
-				<text class="new-notes-footer-end-countdown">
-					未开始
-				</text>
-			</view>
-
-		</view>
-	</view>
-
+	
 </template>
+
+<template name="newItemTpl-2">
+	<view class="view-right" wx:if="{{index%2==1}}">
+		<view class="white-block" wx:if="{{index==1}}"></view>
+		<view class="line-short-right"></view>
+		<view class="new-notes style1" wx:if="{{level==1}}">
+			<view class="new-notes-header">
+				<view class="new-notes-header-time-1">{{time}}  {{title}}</view>
+				<view class="new-notes-header-circle"></view>
+			</view>
+			<view class="new-notes-content">
+				<text class="new-notes-content-txt">{{content}}</text>
+			</view>
+			<view class="new-notes-footer">
+				<view class="new-notes-footer-start">
+					<text class="new-notes-footer-start-word">
+						距离开始还有
+					</text>
+					<text class="new-notes-footer-start-countdown">
+						0天3小时5分
+					</text>
+				</view>
+
+				<view class="new-notes-footer-end">
+					<text class="new-notes-footer-end-word">
+						距离结束还有
+					</text>
+					<text class="new-notes-footer-end-countdown">
+						未开始
+					</text>
+				</view>
+			</view>
+		</view>
+
+		<view class="new-notes style2" wx:elif="{{level==2}}">
+			<view class="new-notes-header">
+				<view class="new-notes-header-time-1">{{time}}  {{title}}</view>
+				<view class="new-notes-header-circle"></view>
+			</view>
+			<view class="new-notes-content">
+				<text class="new-notes-content-txt">{{content}}</text>
+			</view>
+			<view class="new-notes-footer">
+				<view class="new-notes-footer-start">
+					<text class="new-notes-footer-start-word">
+						距离开始还有
+					</text>
+					<text class="new-notes-footer-start-countdown">
+						0天3小时5分
+					</text>
+				</view>
+
+				<view class="new-notes-footer-end">
+					<text class="new-notes-footer-end-word">
+						距离结束还有
+					</text>
+					<text class="new-notes-footer-end-countdown">
+						未开始
+					</text>
+				</view>
+			</view>
+		</view>
+
+		<view class="new-notes style3" wx:elif="{{level==3}}">
+			<view class="new-notes-header">
+				<view class="new-notes-header-time-1">{{time}}  {{title}}</view>
+				<view class="new-notes-header-circle"></view>
+			</view>
+			<view class="new-notes-content">
+				<text class="new-notes-content-txt">{{content}}</text>
+			</view>
+			<view class="new-notes-footer">
+				<view class="new-notes-footer-start">
+					<text class="new-notes-footer-start-word">
+						距离开始还有
+					</text>
+					<text class="new-notes-footer-start-countdown">
+						0天3小时5分
+					</text>
+				</view>
+
+				<view class="new-notes-footer-end">
+					<text class="new-notes-footer-end-word">
+						距离结束还有
+					</text>
+					<text class="new-notes-footer-end-countdown">
+						未开始
+					</text>
+				</view>
+			</view>
+		</view>
+
+		<view class="new-notes style4" wx:else>
+			<view class="new-notes-header">
+				<view class="new-notes-header-time-1">{{time}}  {{title}}</view>
+				<view class="new-notes-header-circle"></view>
+			</view>
+			<view class="new-notes-content">
+				<text class="new-notes-content-txt">{{content}}</text>
+			</view>
+			<view class="new-notes-footer">
+				<view class="new-notes-footer-start">
+					<text class="new-notes-footer-start-word">
+						距离开始还有
+					</text>
+					<text class="new-notes-footer-start-countdown">
+						0天3小时5分
+					</text>
+				</view>
+
+				<view class="new-notes-footer-end">
+					<text class="new-notes-footer-end-word">
+						距离结束还有
+					</text>
+					<text class="new-notes-footer-end-countdown">
+						未开始
+					</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+
+

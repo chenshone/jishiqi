@@ -1,4 +1,5 @@
 <!--pages/new/new.wxml-->
+<import src="new-item/new-item-tpl.wxml" />
 <view class="container">
 	<view class="date-box">
 		<text class="mouthDay">{{dateList[len-1].date}}</text>
@@ -20,7 +21,7 @@
 			<text>今日待办</text>
 		</view>
 		<view class="todoNum">
-		<text>: {{listNum[listNumLen-1].allNum}}</text>
+			<text>: {{listNum[listNumLen-1].allNum}}</text>
 		</view>
 	</view>
 	<view class="todoDetails">
@@ -37,8 +38,18 @@
 			<text>{{listNum[listNumLen-1].dNum}}</text>
 		</view>
 	</view>
+
 	<scroll-view class="content" scroll-y="true">
-		<block wx:for = "{{dateList[len-1]}}" wx:for-index = "index">
+		<view class="middle">
+			<image class="middle-img" src="../../images/new/减去%2013.png"></image>
+		</view>
+		<block wx:for="{{dateList[len-1].things}}" wx:for-item="item" wx:for-index="index">
+			<view class="view-left" wx:if="{{index%2==0}}">
+				<template is="newItemTpl-1" data="{{...item}}"></template>
+			</view>
+			<view class="view-left" wx:if="{{index%2==1}}">
+				<template is="newItemTpl-2" data="{{...item}}"></template>
+			</view>
 		</block>
 	</scroll-view>
 </view>
