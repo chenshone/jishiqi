@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/new/new"
+    "pages/list/list"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ECC0A8"

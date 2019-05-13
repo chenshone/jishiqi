@@ -1,8 +1,7 @@
-/* pages/new/new.wxss */
-@import "new-item/new-item-tpl.wxss";
+
+@import "list-item/list-item-tpl.wxss";
 .container {
-	padding-left: 38rpx;
-	padding: 68rpx 38rpx 0 38rpx;
+	padding: 38rpx 38rpx 0 38rpx;
 }
 
 .date-box {
@@ -45,8 +44,8 @@
 	letter-spacing: 0px;
 	color: #ffffff;
 	position: absolute;
-	left: 580rpx;
-	top: 126rpx;
+	right: 38rpx;
+	top: 96rpx;
 	padding: 0.1875rem;
 }
 
@@ -58,7 +57,7 @@
 .lin2 {
 	width: 316rpx;
 	margin-top: 38rpx;
-	margin-left: 336rpx;
+	margin-left: 344rpx;
 }
 
 .zhou {
@@ -66,7 +65,7 @@
 }
 
 .zhou-img {
-	width: 660rpx;
+	width: 664rpx;
 	height: 58rpx;
 }
 
@@ -96,8 +95,8 @@
 
 .todoDetails{
 	position: absolute;
-	top: 354rpx;
-	right: 58rpx;
+	top: 324rpx;
+	right: 50rpx;
 	font-family: Segoe UI;
 	font-size: 20rpx;
 	font-weight: normal;
@@ -121,10 +120,8 @@
 }
 
 .content{
-	height: 640rpx;
-	white-space: nowrap;
-	border: 1px solid #ffffff;
-	width: 650rpx;
+	height: 52vh;
+	width: 669rpx;
 }
 
 .middle{
@@ -136,3 +133,29 @@
 	width: 48rpx;
 	height: 56rpx;
 }
+
+.pad{
+	padding-top: 50rpx;
+}
+
+.remar{
+	margin-top: -50rpx;
+}
+ 
+ .content-body{
+	display: flex;
+	margin-top: -12rpx;
+	flex-flow: row-reverse wrap;
+ }
+ 
+ .footer{
+	 width: 100%;
+	 text-align: center;
+	 padding-top: 30rpx;
+ }
+ 
+ .button-new{
+	 width: 84rpx;
+	 height: 84rpx;
+	 padding-right: 6rpx;
+ }

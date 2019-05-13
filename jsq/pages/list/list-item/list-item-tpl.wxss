@@ -1,17 +1,18 @@
 .view-left{
-	width: 50%;
+	width: 46%;
 	height: 286rpx;
 	border: 0;
-	border-left: 0.0625rem solid #ffffff;
-	padding: 10rpx 0 0 24rpx;
+	border-left: 2rpx solid #ffffff;
+	padding: 10rpx 0 0 26rpx;
+	margin-left: -2rpx;
 }
 
 .view-right{
-	width: 50%;
+	width: 46%;
 	height: 286rpx;
 	border: 0;
-	border-right: 0.0625rem solid #ffffff;
-	padding: 10rpx 24rpx 0 0;
+	border-right: 2rpx solid #ffffff;
+	padding: 10rpx 16rpx 0 0;
 }
 
 .line-short-left{
@@ -20,6 +21,7 @@
 	height: 0.0625rem;
 	width: 118rpx;
 	margin-bottom: 4rpx;
+	margin-left: -26rpx;
 }
 
 .line-short-right{
@@ -27,7 +29,7 @@
 	background-color: #ffffff;
 	height: 0.0625rem;
 	width: 118rpx;
-	margin-left: 218rpx;
+	margin-left: 206rpx;
 	margin-bottom: 4rpx;
 }
 
@@ -35,8 +37,9 @@
 	border: 0;
 	border-radius: 20rpx;
 	height: 204rpx;
-	width: 282rpx;
-	padding: 10rpx;
+	width: 258rpx;
+	padding: 5rpx;
+	margin-top: 12rpx;
 }
 
 .style1{
@@ -66,7 +69,7 @@
 
 
 .new-notes-header{
-	width: 100%;q
+	width: 100%;
 	display:flex ;
 }
 
@@ -86,7 +89,7 @@
 	padding: 12rpx 0 0rpx 0rpx;
 	margin-left: 10rpx;
 	font-family: Segoe UI;
-	font-size: 14rpx;
+	font-size: 20rpx;
 	font-weight: normal;
 	font-stretch: normal;
 	line-height: 20rpx;
@@ -95,26 +98,29 @@
 }
 
 .new-notes-header-time-1{
-	height: 34rpx;
+	height: 25rpx;
 	width: 188rpx;
 	border: 0;
 	border-bottom: 1px solid #ffffff;
-	padding: 12rpx 0 2rpx 2rpx;
+	padding: 12rpx 0 0rpx 0rpx;
 	font-family: Segoe UI;
-	font-size: 14rpx;
+	font-size: 20rpx;
 	font-weight: normal;
 	font-stretch: normal;
 	line-height: 20rpx;
 	letter-spacing: 0px;
 	color: #ffffff;
 	margin-left: 30rpx;
+	text-align: right;
+	margin-right: 10rpx;
 }
 
 .new-notes-content{
-	height: 114rpx;
-	width: 242rpx;
+	height: 130rpx;
+	width: 256rpx;
 	border: 0;
 	border-bottom: 1px solid #ffffff;
+	padding-top: 6rpx;
 }
 
 .new-notes-content text{
@@ -130,11 +136,11 @@
 
 .new-notes-footer{
 	border: 0;
-	padding-top: 14rpx;
+	padding-top: 6rpx;
 	display: flex;
 	justify-content: space-between;
 	font-family: Segoe UI;
-	font-size: 12rpx;
+	font-size: 17rpx;
 	font-weight: normal;
 	font-stretch: normal;
 	line-height: 12rpx;
@@ -152,6 +158,7 @@
 .new-notes-footer-start,.new-notes-footer-end{
 	display: flex;
 }
+
 
 .new-notes{
 	padding: 20rpx;
