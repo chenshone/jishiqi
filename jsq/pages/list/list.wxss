@@ -1,5 +1,5 @@
-
 @import "list-item/list-item-tpl.wxss";
+
 .container {
 	padding: 38rpx 38rpx 0 38rpx;
 }
@@ -72,6 +72,7 @@
 .to-do {
 	color: #ffffff;
 	display: flex;
+	margin-top: 12rpx;
 }
 
 .to-word {
@@ -93,7 +94,7 @@
 	justify-content: center;
 }
 
-.todoDetails{
+.todoDetails {
 	position: absolute;
 	top: 324rpx;
 	right: 50rpx;
@@ -107,55 +108,67 @@
 	display: flex;
 }
 
-.todoDetails-word{
+.todoDetails-word {
 	margin-right: 40rpx;
 	display: flex;
 	flex-direction: column;
 	text-align: right;
 }
 
-.todoDetails-num{
+.todoDetails-num {
 	display: flex;
 	flex-direction: column;
 }
 
-.content{
+.content {
 	height: 52vh;
 	width: 669rpx;
 }
 
-.middle{
+.middle {
 	width: 100%;
 	text-align: center;
 }
 
-.middle-img{
+.middle-img {
 	width: 48rpx;
 	height: 56rpx;
 }
 
-.pad{
+.pad {
 	padding-top: 50rpx;
 }
 
-.remar{
+.remar {
 	margin-top: -50rpx;
 }
- 
- .content-body{
+
+.content-body {
 	display: flex;
 	margin-top: -12rpx;
 	flex-flow: row-reverse wrap;
- }
- 
- .footer{
-	 width: 100%;
-	 text-align: center;
-	 padding-top: 30rpx;
- }
- 
- .button-new{
-	 width: 84rpx;
-	 height: 84rpx;
-	 padding-right: 6rpx;
- }
+}
+
+.footer {
+	width: 100%;
+	text-align: center;
+	padding-top: 30rpx;
+}
+
+.button-new {
+	width: 84rpx;
+	height: 84rpx;
+	padding-right: 6rpx;
+}
+
+.tips,
+.to-word {
+	font-weight: bold;
+}
+
+/*scroll-view隐藏滚动条*/
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	color: transparent;
+}

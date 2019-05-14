@@ -14,7 +14,7 @@
 	</view>
 	<view class="line lin2"></view>
 	<view class="zhou">
-		<image src="../../images/new/组%2029.png" class="zhou-img"></image>
+		<image src="../../images/new/zhou.png" class="zhou-img"></image>
 	</view>
 	<view class="to-do">
 		<view class="to-word">
@@ -41,7 +41,7 @@
 	
 	<scroll-view class="content" scroll-y="true">
 		<view class="middle">
-			<image class="middle-img" src="../../images/new/减去%2013.png"></image>
+			<image class="middle-img" src="../../images/new/local.png"></image>
 		</view>
 		<view class = "content-body">
 			<block wx:for="{{dateList[len-1].things}}" wx:for-item="item" wx:for-index="index">
@@ -62,6 +62,6 @@
 	</scroll-view>
 	
 	<view class="footer">
-		<image class="button-new" src="../../images/new/组%2028.png"></image>
+		<image class="button-new" src="../../images/new/input.png"></image>
 	</view>
 </view>
