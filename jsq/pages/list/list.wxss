@@ -1,4 +1,10 @@
 @import "list-item/list-item-tpl.wxss";
+@import "../../data/new_bg.wxss";
+
+page{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 .container {
 	padding: 38rpx 38rpx 0 38rpx;
@@ -65,6 +71,9 @@
 }
 
 .zhou-img {
+	z-index: -1;
+	position: absolute;
+	top:276rpx;
 	width: 664rpx;
 	height: 58rpx;
 }
@@ -171,4 +180,28 @@
 	width: 0;
 	height: 0;
 	color: transparent;
+}
+
+
+movable-area{
+	width: 664rpx;
+	height: 60rpx;
+}
+
+movable-view{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	height: 26rpx;
+	border: 0;
+	border-bottom: 6rpx solid rgba(255,255,255,1);
+	width: 332rpx;
+	top: 10rpx;
+}
+
+.dataPoint{
+	height: auto;
+	width: 4rpx;
+	border: 0;
+	background-color: rgba(255,255,255,1);
 }
