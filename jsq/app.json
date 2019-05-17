@@ -3,7 +3,7 @@
     "pages/list/list"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ECC0A8"
+    "navigationStyle": "custom"
   },
   "sitemapLocation": "sitemap.json"
 }

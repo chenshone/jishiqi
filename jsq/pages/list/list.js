@@ -6,7 +6,12 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-
+		idx: dateObj.dateListLen - 1,
+		idxEnd: dateObj.dateListLen - 1,
+		CX: 0,
+		unit: 0,
+		disabled:true,
+		localEnd:0
 	},
 
 	/**
@@ -16,56 +21,59 @@ Page({
 		this.setData({
 			dateList: dateObj.dateList,
 			len: dateObj.dateListLen,
-			listNum: dateObj.dateListNum,
-			listNumLen: dateObj.dateListNumLen
+			listNum: dateObj.dateListNum
 		})
 	},
 
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
 	onReady: function() {
+		if(this.data.len>0){
+			const query = wx.createSelectorQuery()
+			query.select('#block').boundingClientRect()
+			query.selectViewport()
+			query.exec((res) => {
+				this.setData({
+					unit: res[0].width / (this.data.len - 1),
+					disabled:false
+				})
+			})
+		}
+		
 
 	},
 
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
-	onShow: function() {
-
+	changeStart: function(event) {
+		let cX = event.touches[0].pageX;
+		this.setData({
+			CX: cX
+		})
 	},
 
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function() {
-
+	changeDate: function(event) {
+		let cX = event.touches[0].pageX;
+		cX = cX - this.data.CX;
+		cX = Math.round(cX / this.data.unit);
+		cX = this.data.idxEnd - cX;
+		if (cX >= 0 && cX <= (this.data.len - 1)) {
+			this.setData({
+				idx: cX
+			})
+		}
 	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function() {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function() {
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function() {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function() {
-
+ 	changeEnd:function(event){
+		this.setData({
+			idxEnd:this.data.idx,
+			localEnd:this.data.unit*(this.data.len - this.data.idx - 1)
+		})
+ 	},
+	
+	changeCanel:function(event){
+		this.setData({
+			idxEnd:this.data.idx,
+			localEnd:this.data.unit*(this.data.len - this.data.idx - 1)
+		})
 	}
+	
+	
+
+
 })

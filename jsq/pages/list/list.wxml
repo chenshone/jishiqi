@@ -1,21 +1,25 @@
 <import src="list-item/list-item-tpl.wxml" />
+<import src="../../data/tpl/navigation.wxml" />
+<template is="navigation"></template>
 <view class="container">
 	<view class="date-box">
-		<text class="mouthDay">{{dateList[len-1].date}}</text>
+		<text class="mouthDay">{{dateList[idx].date}}</text>
 		<view class="year-week-box">
-			<text class="year">{{dateList[len-1].year}}</text>
-			<text class="week">{{dateList[len-1].week}}</text>
+			<text class="year">{{dateList[idx].year}}</text>
+			<text class="week">{{dateList[idx].week}}</text>
 		</view>
 	</view>
 	<view class="line line1"></view>
-	<view class="tips">
+	<view class="tips" >
 		<text>事项时轴</text>
 	</view>
 	<view class="line lin2"></view>
 	<view class="zhou">
 		<movable-area>
-			<movable-view direction="horizontal">
-				<block wx:for="{{dateList}}" wx:for-item="item1" wx:for-index="idx">
+			<movable-view id="block" direction="horizontal" disabled="{{disabled}}" 
+			catchhtouchmove = "changeDate" catchtouchstart = "changeStart" 
+			catchtouchcancel="changeCanel" catchtouchend="changeEnd" style="transform: translateX({{localEnd}}px);">
+				<block wx:for="{{dateList}}">
 					<view class="dataPoint"></view>
 				</block>
 			</movable-view>
@@ -27,7 +31,7 @@
 			<text>今日总计</text>
 		</view>
 		<view class="todoNum">
-			<text>: {{listNum[listNumLen-1].allNum}}</text>
+			<text>: {{listNum[idx].allNum}}</text>
 		</view>
 	</view>
 	<view class="todoDetails">
@@ -38,10 +42,10 @@
 			<text>休闲</text>
 		</view>
 		<view class="todoDetails-num">
-			<text>{{listNum[listNumLen-1].aNum}}</text>
-			<text>{{listNum[listNumLen-1].bNum}}</text>
-			<text>{{listNum[listNumLen-1].cNum}}</text>
-			<text>{{listNum[listNumLen-1].dNum}}</text>
+			<text>{{listNum[idx].aNum}}</text>
+			<text>{{listNum[idx].bNum}}</text>
+			<text>{{listNum[idx].cNum}}</text>
+			<text>{{listNum[idx].dNum}}</text>
 		</view>
 	</view>
 
@@ -50,7 +54,7 @@
 			<image class="middle-img" src="../../images/new/local.png"></image>
 		</view>
 		<view class="content-body">
-			<block wx:for="{{dateList[len-1].things}}" wx:for-item="item" wx:for-index="index">
+			<block wx:for="{{dateList[idx].things}}" wx:for-item="item" wx:for-index="index">
 				<view class="view-left" wx:if="{{index==0}}">
 					<template is="newItemTpl-2" data="{{...item}}"></template>
 				</view>

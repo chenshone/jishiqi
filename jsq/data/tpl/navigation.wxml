@@ -1,0 +1,5 @@
+<template name="navigation">
+	<view class="header">
+		<text class="headerName">{{headerName}}</text>
+	</view>
+</template>

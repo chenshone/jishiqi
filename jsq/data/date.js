@@ -109,6 +109,122 @@ var dateList = [{
 		time:"00:00"
 	}]
 },
+{
+	date:"5月8日",
+	year:"2019",
+	week:"周二",
+	things:[{
+		title:"打工1",
+		content:"按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发",
+		level:1,
+		time:"00:00"
+	},
+	{
+		title:"打工2",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:2,
+		time:"00:00"
+	},
+	{
+		title:"打工3",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:3,
+		time:"00:00"
+	},
+	{
+		title:"打工4",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:4,
+		time:"00:00"
+	}]
+},
+{
+	date:"5月9日",
+	year:"2019",
+	week:"周二",
+	things:[{
+		title:"打工1",
+		content:"按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发",
+		level:1,
+		time:"00:00"
+	},
+	{
+		title:"打工2",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:2,
+		time:"00:00"
+	},
+	{
+		title:"打工3",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:3,
+		time:"00:00"
+	},
+	{
+		title:"打工4",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:4,
+		time:"00:00"
+	}]
+},
+{
+	date:"5月10日",
+	year:"2019",
+	week:"周二",
+	things:[{
+		title:"打工1",
+		content:"按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发",
+		level:1,
+		time:"00:00"
+	},
+	{
+		title:"打工2",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:2,
+		time:"00:00"
+	},
+	{
+		title:"打工3",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:3,
+		time:"00:00"
+	},
+	{
+		title:"打工4",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:4,
+		time:"00:00"
+	}]
+},
+{
+	date:"5月11日",
+	year:"2019",
+	week:"周二",
+	things:[{
+		title:"打工1",
+		content:"按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发按时大大娃娃发发发我方法的飞洒发",
+		level:1,
+		time:"00:00"
+	},
+	{
+		title:"打工2",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:2,
+		time:"00:00"
+	},
+	{
+		title:"打工3",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:3,
+		time:"00:00"
+	},
+	{
+		title:"打工4",
+		content:"按时大大娃娃发发发我方法的飞洒发",
+		level:4,
+		time:"00:00"
+	}]
+}
 ]
 
 var dateListNum = [];
@@ -119,9 +235,9 @@ for(let i of dateList){
 	let a = 0,b = 0,c = 0,d = 0;
 	for(let k of i.things){
 		if(k.level === 1) a++;
-		if(k.level === 2) b++;
-		if(k.level === 3) c++;
-		if(k.level === 4) d++;
+		else if(k.level === 2) b++;
+		else if(k.level === 3) c++;
+		else d++;
 	}
 	dateListNum[j] = {
 		allNum:i.things.length,
@@ -135,6 +251,5 @@ for(let i of dateList){
 module.exports = {
 	dateList:dateList,
 	dateListLen:dateList.length,
-	dateListNum:dateListNum,
-	dateListNumLen:dateListNum.length
+	dateListNum:dateListNum
 }
