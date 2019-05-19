@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="top">
+		<image class="topbackground" src="../../images/new/bg.png"></image>
+</view>
+<view class="top-word">
+	<view class="Date">
+		<text class="date1">5月20日</text>
+		<view class="date2">
+			<text>2019 </text>
+			<text> 周一</text>
+		</view>          <!--头部时间布局-->
+	</view>
+</view>
+<view class="thing">
+		<text class="new-thing">新建事项</text>
+</view>                                         <!--头部新建事项布局-->
+<view class="list">
+	<view class="border">                           <!--背景设置-->
+		<view class="Things">
+			<image class="img" src="../../images/new/mulu.png"></image>
+			<view class="thingsname">
+				<input class="thingsName" placeholder="事项主题"/>    <!--事项主题填写处-->
+			</view>
+		</view>
+		<view class="Things">
+			<image class="img" src="../../images/new/rili.png"></image>
+			<view class="startTime">
+				<text class="text">起始</text>
+				<view class="dateXiang">
+					<text class="date">2019/5/9 周日 19:30</text>         <!--事项开始时间调用-->
+					<image class="xia" src="../../images/new/xia.png"></image>    <!--下拉箭头-->
+				</view>
+			</view>
+			<text>——</text>
+			<view class="endTime">
+				<text class="text">结束</text>
+				<view class="dateXiang">
+					<text class="date">2019/5/9 周日 19:30</text>         <!--事项结束时间调用-->
+					<image class="xia" src="../../images/new/xia.png"></image>    <!--下拉箭头-->
+				</view>				
+			</view>
+		</view>
+		<view class="Things">
+			<image class="img" src="../../images/new/group5.png"></image>
+			<view class="thingsXiang">
+				<text class="text">事项内容</text>
+				<input class="thingsxiang"/>      <!--事项具体内容填写-->
+			</view>
+		</view>
+		<view class="Things">
+			<image class="img" src="../../images/new/group1.png"></image>
+			<view class="importance">
+				<text class="text">重要程度</text>
+				<view class="imporTance">
+					<image class="imp" src="../../img/组%2024.png"></image >
+					<image class="imp" src="../../img/组%2025.png"></image >
+					<image class="imp" src="../../img/组%2026.png"></image >
+					<image class="imp" src="../../img/组%2027.png"></image >
+				</view>                <!--以上四个图片都为选择，点击事件-->
+			</view>
+		</view>
+		<view class="Thingsx"></view>
+		<view class="complete">
+			<image class="Complete" src="../../img/组%206.png"></image>    <!--完成，也为点击事件-->
+		</view>
+	</view>
+</view>

@@ -1,13 +1,11 @@
-// pages/new/new.js
-var dateObj = require("../../data/date.js");
+import {DBPost} from '../../db/DBPost.js';
+
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		idx: dateObj.dateListLen - 1,
-		idxEnd: dateObj.dateListLen - 1,
 		CX: 0,
 		unit: 0,
 		disabled:true,
@@ -18,10 +16,13 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
+		var dbPost = new DBPost();
 		this.setData({
-			dateList: dateObj.dateList,
-			len: dateObj.dateListLen,
-			listNum: dateObj.dateListNum
+			dateList:dbPost.getAllPostData(),
+			len:dbPost.getAllPostDataLen(),
+			listNum:dbPost.getAllPostDataNum(),
+			idx:dbPost.getAllPostDataLen() - 1,
+			idxEnd:dbPost.getAllPostDataLen() - 1
 		})
 	},
 

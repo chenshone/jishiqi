@@ -24,7 +24,7 @@
 				</block>
 			</movable-view>
 		</movable-area>
-			<image src="../../images/new/zhou.png" class="zhou-img"></image>
+			<image src="../../images/list/zhou.png" class="zhou-img"></image>
 	</view>
 	<view class="to-do">
 		<view class="to-word">
@@ -51,7 +51,7 @@
 
 	<scroll-view class="content" scroll-y="true">
 		<view class="middle">
-			<image class="middle-img" src="../../images/new/local.png"></image>
+			<image class="middle-img" src="../../images/list/local.png"></image>
 		</view>
 		<view class="content-body">
 			<block wx:for="{{dateList[idx].things}}" wx:for-item="item" wx:for-index="index">
@@ -72,6 +72,6 @@
 	</scroll-view>
 
 	<view class="footer">
-		<image class="button-new" src="../../images/new/input.png"></image>
+		<image class="button-new" src="../../images/list/input.png"></image>
 	</view>
 </view>

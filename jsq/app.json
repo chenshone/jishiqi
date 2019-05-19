@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/list/list"
+    "pages/w/w",
+    "pages/list/list",
+		"pages/eventName/eventName",
+		"pages/event_queue/event_queue"
   ],
   "window": {
     "navigationStyle": "custom"

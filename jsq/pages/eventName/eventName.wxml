@@ -1,0 +1,33 @@
+<view class="eventText">
+	<text class="event">事件：</text>
+	<text class="event-xiang">{{}}</text>
+</view>
+<view class="Time">
+	<text class="time">时间：</text>
+	<text class="time_qi">{{}}</text>
+</view>
+<view class="jiantou">
+	<image class="qi" src="../../img/组%2039.png"></image>
+	<image class="zhuan" src="../../img/组%2037.png"></image>
+	<image class="zhuan" src="../../img/组%2038.png"></image>
+	<image class="zhong" src="../../img/组%2036.png"></image>
+</view>
+<view class="Time">
+	<text class="time_zhong">{{}}</text>
+</view>
+<view class="xiang">
+	<text class="neirong">内容：</text>
+	<text class="neirong_xiang">{{}}</text>
+</view>
+<view class="start_Time">
+	<text class="start">距离开始：</text>
+	<text class="stat_time">{{}}</text>
+</view>
+<view class="end_Time">
+	<text class="end">距离结束：</text>
+	<text class="end_time">{{}}</text>
+</view>
+<view class="Beizhu">
+	<text class="beizhu">完成备注：</text>
+	<text class="beizhu_xiang">{{}}</text>
+</view>

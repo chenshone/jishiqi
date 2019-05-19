@@ -1,5 +1,6 @@
 @import "list-item/list-item-tpl.wxss";
 @import "../../data/new_bg.wxss";
+@import "../../data/tpl/navigation.wxss";
 
 page{
 	background-repeat: no-repeat;
@@ -51,7 +52,7 @@ page{
 	color: #ffffff;
 	position: absolute;
 	right: 38rpx;
-	top: 96rpx;
+	top: 166rpx;
 	padding: 0.1875rem;
 }
 
@@ -73,7 +74,7 @@ page{
 .zhou-img {
 	z-index: -1;
 	position: absolute;
-	top:276rpx;
+	top:346rpx;
 	width: 664rpx;
 	height: 58rpx;
 }
@@ -105,7 +106,7 @@ page{
 
 .todoDetails {
 	position: absolute;
-	top: 324rpx;
+	top: 396rpx;
 	right: 50rpx;
 	font-family: Segoe UI;
 	font-size: 20rpx;

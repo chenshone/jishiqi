@@ -1,0 +1,193 @@
+/**index.wxss**/
+page {
+	background-color: #e9e9e9;
+}
+
+.topbackground {
+	width: 100%;
+	height: 408rpx;
+}
+
+.top-word {
+	position: absolute;
+	top: 20rpx;
+	display: flex;
+}
+
+.Date {
+	flex-direction: column;
+	float: left;
+	display: flex;
+	border: 0px solid;
+	margin-left: 56rpx;
+	margin-top:140rpx;
+	width: 200rpx;
+	height: 120rpx;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.date1 {
+	color: #FFFFFF;
+	font-size: 50rpx;
+	margin-left: 1px;
+	font-weight: 600;
+}
+
+.date2 {
+	flex-direction: row;
+	color: #FFFFFF;
+	margin-left: 1px;
+	font-weight: 4500;
+	font-size: 30rpx;
+}
+
+.thing {
+	position: absolute;
+	margin-top: -160rpx;
+	right: 56rpx;
+	width: 232rpx;
+	height: 50rpx;
+	border-bottom: 1px solid #ffffff;
+	text-align: right;
+}
+
+.new-thing {
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 40rpx;
+	
+}
+
+.list {
+	position: absolute;
+	top: 320rpx;
+	margin: auto;
+	width: 100%;
+	align-items: center;
+}
+
+.border {
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	width: 640rpx;
+	height: 900rpx;
+	padding-top: 1rpx;
+}
+
+.Things {
+	margin-top: 60rpx;
+	margin-left: 50rpx;
+	flex-direction: row;
+	display: flex;
+}
+
+.img {
+	width: 20px;
+	height: 20px;
+}
+
+.thingsname {
+	width: 450rpx;
+	margin-left: 20rpx;
+	margin-top: -10rpx;
+	border-bottom: 1px solid #AAAAAA;
+}
+
+.thingsName {
+	font-size: 20rpx;
+	color: #E9E9E9;
+}
+
+.startTime {
+	display: flex;
+	flex-direction: column;
+	margin-top: -20rpx;
+	margin-left: 20rpx;
+	border-bottom: 1px solid #AAAAAA;
+}
+
+.text {
+	font-size: 14rpx;
+	color: #AAAAAA;
+}
+
+.dateXiang {
+	flex-direction: column;
+	margin-top: -10rpx;
+}
+
+.date {
+	color: #AAAAAA;
+	font-size: 15rpx;
+}
+
+.xia {
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.endTime {
+	display: flex;
+	flex-direction: column;
+	margin-top: -20rpx;
+	margin-left: 20rpx;
+	border-bottom: 1px solid #AAAAAA;
+}
+
+.thingsXiang {
+	display: flex;
+	flex-direction: column;
+	margin-top: -20rpx;
+	margin-left: 20rpx;
+}
+
+.thingsxiang {
+	margin-top: 6rpx;
+	border: 1px solid #E9E9E9;
+	border-radius: 10rpx;
+	width: 450rpx;
+	height: 258rpx;
+}
+
+.importance {
+	display: flex;
+	flex-direction: column;
+	margin-top: -20rpx;
+	margin-left: 20rpx;
+}
+
+.imporTance {
+	display: flex;
+	margin-top: 10rpx;
+	width: 100%;
+}
+
+.imp {
+	margin: 1px auto;
+	width: 110rpx;
+	height: 30rpx;
+	text-align: center;
+	display: inline-block;
+	margin-left: 5%;
+}
+
+.Thingsx {
+	border: 1px solid #E9E9E9;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	margin-top: 26rpx;
+	margin-left: 50rpx;
+	width: 510rpx;
+}
+
+.complete {
+	display: flex;
+	margin-top: 60rpx;
+	justify-content: center;
+}
+
+.Complete {
+	width: 160rpx;
+	height: 50rpx;
+}
