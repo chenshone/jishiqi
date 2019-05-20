@@ -24,12 +24,12 @@ page{
 
 .mouthDay {
 	font-size: 50rpx;
+	font-weight:bold;
 }
 
 .year-week-box {
 	margin-top: 3px;
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	font-size: 30rpx;
 }

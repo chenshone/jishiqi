@@ -1,13 +1,13 @@
 <!--index.wxml-->
 <view class="top">
-		<image class="topbackground" src="../../images/new/bg.png"></image>
+		<image class="topbackground" src="../../images/new/bg.jpg"></image>
 </view>
 <view class="top-word">
 	<view class="Date">
-		<text class="date1">5月20日</text>
+		<text class="date1">{{month}}月{{day}}日</text>
 		<view class="date2">
-			<text>2019 </text>
-			<text> 周一</text>
+			<text>{{year}} </text>
+			<text> {{week}}</text>
 		</view>          <!--头部时间布局-->
 	</view>
 </view>
@@ -19,7 +19,7 @@
 		<view class="Things">
 			<image class="img" src="../../images/new/mulu.png"></image>
 			<view class="thingsname">
-				<input class="thingsName" placeholder="事项主题"/>    <!--事项主题填写处-->
+				<input class="thingsName" placeholder="事项主题" maxlength="12"/>    <!--事项主题填写处-->
 			</view>
 		</view>
 		<view class="Things">

@@ -15,30 +15,29 @@ page {
 }
 
 .Date {
-	flex-direction: column;
-	float: left;
-	display: flex;
-	border: 0px solid;
 	margin-left: 56rpx;
 	margin-top:140rpx;
 	width: 200rpx;
 	height: 120rpx;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 10px;
+	padding: 0.3125rem;
 }
 
 .date1 {
 	color: #FFFFFF;
 	font-size: 50rpx;
 	margin-left: 1px;
-	font-weight: 600;
+	font-weight:bold;
 }
 
 .date2 {
-	flex-direction: row;
+	display: flex;
+	justify-content: space-between;
 	color: #FFFFFF;
-	margin-left: 1px;
-	font-weight: 4500;
+	margin-top: 8rpx;
 	font-size: 30rpx;
+	width: 186rpx;
 }
 
 .thing {
@@ -91,11 +90,12 @@ page {
 	margin-left: 20rpx;
 	margin-top: -10rpx;
 	border-bottom: 1px solid #AAAAAA;
+	height: 52.5rpx;
+	line-height: 50rpx;
 }
 
 .thingsName {
-	font-size: 20rpx;
-	color: #E9E9E9;
+	font-size: 34rpx;
 }
 
 .startTime {
@@ -112,7 +112,6 @@ page {
 }
 
 .dateXiang {
-	flex-direction: column;
 	margin-top: -10rpx;
 }
 
@@ -190,4 +189,7 @@ page {
 .Complete {
 	width: 160rpx;
 	height: 50rpx;
+}
+input::-webkit-input-placeholder{
+	color: #AAAAAA;
 }

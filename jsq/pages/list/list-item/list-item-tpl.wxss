@@ -115,6 +115,12 @@
 	margin-right: 10rpx;
 }
 
+.new-notes-header-time,.new-notes-header-time-1{
+	overflow: hidden;
+	white-space: normal;
+	text-overflow: ellipsis;
+}
+
 .new-notes-content{
 	height: 130rpx;
 	width: 256rpx;
