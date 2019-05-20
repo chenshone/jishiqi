@@ -1,31 +1,31 @@
-.eventName{
-	flex-direction: column;
-}
 .border{
 	flex-direction: column;
 	display: flex;
 }
 .eventText{
 	display: flex;
-	margin-left: 20px;
-	margin-top: 32px;
+	margin-left: 35rpx;
+	margin-top: 64rpx;
 }
 .event{
 	color: #000000;
 	font-size: 15px;
 	color: #AAAAAA;
 }
+.event-xiang{
+	color: #AAAAAA;
+	font-size: 15px;
+}
 .Time{
 	margin-top: 34px;
 	display: flex;
 }
 .time{
-	margin-left: 20px;
+	margin-left: 35rpx;
 	color: #ff3434;
 	font-size: 15px;
 }
 .jiantou{
-	display: flex;
 	flex-direction: row;
 	margin-left: 100px;
 	margin-top: 15px;
@@ -33,6 +33,10 @@
 .qi{
 	width: 15px;
 	height: 15px;
+}
+.time_qi{
+	font-size: 10px;
+	color: #A2A2A2;
 }
 .zhuan{
 	width: 15px;
@@ -43,23 +47,37 @@
 	height: 15px;
 }
 .time_zhong{
+	font-size: 10px;
+	color: #A2A2A2;
+}
+.time_zhong{
 	margin-left: 70px;
 }
 .xiang{
-	width: 100px;
+	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: row;
-	margin-left: 20px;
+	margin-left: 35rpx;
 }
 .neirong{
 	font-size: 15px;
 	color: #AAAAAA;
 }
+.neirong_xiang{
+	font-size: 15px;
+	color: #A2A2A2;
+}
 .start_Time{
 	display: flex;
-	margin-left: 20px;
-	margin-top: 100px;
+	margin-left: 35rpx;
+	margin-top: 10rpx;
+	width: 100%;
+	height: 52rpx;
+}
+.stat_time{
+	font-size: 15px;
+	color: #A2A2A2;
 }
 .start{
 	font-size: 15px;
@@ -67,19 +85,30 @@
 }
 .end_Time{
 	display: flex;
-	margin-left: 20px;
-	margin-top: 26px;
+	margin-left: 35rpx;
+	margin-top: 26rpx;
+	width: 100%;
+	height: 52rpx;
 }
 .end{
 	font-size: 15px;
 	color: #AAAAAA;
 }
+.end_time{
+	font-size: 15px;
+	color: #A2A2A2;
+}
 .Beizhu{
 	display: flex;
-	margin-left: 20px;
+	margin-left: 35rpx;
 	margin-top: 26px;
+	width: 100%;
 }
 .beizhu{
 	font-size: 15px;
 	color: #AAAAAA;
+}
+.beizhu_xiang{
+	font-size: 15px;
+	color: #A2A2A2;
 }
