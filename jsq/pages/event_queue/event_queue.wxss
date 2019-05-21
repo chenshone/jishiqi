@@ -86,7 +86,7 @@ page {
 }
 
 .thingsname {
-	width: 450rpx;
+	width: 466rpx;
 	margin-left: 20rpx;
 	margin-top: -10rpx;
 	border-bottom: 1px solid #AAAAAA;
@@ -95,29 +95,32 @@ page {
 }
 
 .thingsName {
-	font-size: 34rpx;
+	font-size: 30rpx;
 }
 
-.startTime {
+.startTime ,.endTime {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
 	margin-top: -20rpx;
 	margin-left: 20rpx;
 	border-bottom: 1px solid #AAAAAA;
+	width: 175rpx;
+	height: 60rpx;
+}
+
+.dateXiang{
+	padding-top: 8rpx;
 }
 
 .text {
-	font-size: 14rpx;
+	font-size: 20rpx;
 	color: #AAAAAA;
 }
 
-.dateXiang {
-	margin-top: -10rpx;
-}
 
 .date {
 	color: #AAAAAA;
-	font-size: 15rpx;
+	font-size: 20rpx;
 }
 
 .xia {
@@ -125,18 +128,10 @@ page {
 	height: 30rpx;
 }
 
-.endTime {
-	display: flex;
-	flex-direction: column;
-	margin-top: -20rpx;
-	margin-left: 20rpx;
-	border-bottom: 1px solid #AAAAAA;
-}
 
 .thingsXiang {
 	display: flex;
 	flex-direction: column;
-	margin-top: -20rpx;
 	margin-left: 20rpx;
 }
 
@@ -146,40 +141,37 @@ page {
 	border-radius: 10rpx;
 	width: 450rpx;
 	height: 258rpx;
-	color: #AAAAAA;
 	font-size: 30rpx;
 }
 
 .importance {
 	display: flex;
 	flex-direction: column;
-	margin-top: -20rpx;
+	margin-top: -6rpx;
 	margin-left: 20rpx;
 }
 
 .imporTance {
 	display: flex;
+	justify-content:space-between;
 	margin-top: 10rpx;
-	width: 100%;
+	width: 470rpx;
 }
 
 .imp {
-	margin: 1px auto;
 	width: 110rpx;
-	height: 30rpx;
+	height: 46rpx;
 	text-align: center;
-	display: inline-block;
-	margin-left: 5%;
+	border-radius: 16rpx;
+	font-size: 18rpx;
+	line-height: 46rpx;
+	color: #FFFFFF;
 }
 
 .Thingsx {
-	border: 1px solid #E9E9E9;
-	border-top: none;
-	border-left: none;
-	border-right: none;
-	margin-top: 26rpx;
-	margin-left: 50rpx;
-	width: 510rpx;
+	border-bottom: 1px solid #E9E9E9;
+	margin: 26rpx 0rpx 0 50rpx;
+	width: 544rpx;
 }
 
 .complete {
@@ -189,16 +181,34 @@ page {
 	height: 50rpx;
 	border-radius: 10px;
 	text-align: center;
+	align-items: center;
 	margin-left: 30%;
-	justify-content: center;
+	padding-bottom: 6rpx;
 }
 
 .Complete {
-	font-size: 40rpx;
+	font-size: 36rpx;
 	font-weight: bold;
-	line-height: 40rpx;
 	color: #2AB9E2;
 }
-input::-webkit-input-placeholder{
-	color: #AAAAAA;
+
+.touch1{
+	background-color: #fb0000;
 }
+
+.touch2{
+	background-color: #fabc35;
+}
+
+.touch3{
+	background-color: #00F5FF;
+}
+
+.touch4{
+	background-color: #00bc12;
+}
+
+.untouch{
+	background-color: #AAAAAA;
+}
+
