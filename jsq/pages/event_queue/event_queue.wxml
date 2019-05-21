@@ -44,7 +44,7 @@
 			<image class="img" src="../../images/new/group5.png"></image>
 			<view class="thingsXiang">
 				<text class="text">事项内容</text>
-				<input class="thingsxiang"/>      <!--事项具体内容填写-->
+				<textarea class="thingsxiang"/>      <!--事项具体内容填写-->
 			</view>
 		</view>
 		<view class="Things">
@@ -60,8 +60,9 @@
 			</view>
 		</view>
 		<view class="Thingsx"></view>
-		<view class="complete">
-			<image class="Complete" src="../../img/组%206.png"></image>    <!--完成，也为点击事件-->
+		<view  catchtap="onTapJump" class="complete">
+			<text class="Complete">完成</text>    <!--完成，也为点击事件已经建好，请关联函数-->
 		</view>
 	</view>
 </view>
+

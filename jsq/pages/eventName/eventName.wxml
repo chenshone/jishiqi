@@ -1,33 +1,66 @@
-<view class="eventText">
-	<text class="event">事件：</text>
-	<input class="event-xiang">{{}}</input>
+<view class="top">
+	<view class="eventText">
+		<view class="event">
+			<view class="t-event">
+				<text>事</text>
+				<text>件 :</text>
+			</view>
+			<image class="i-event" src="../../images/detail/48.png"></image>
+		</view>
+		<input class="event-xiang">{{}}</input>
+	</view>
+	<view class="Time">
+		<view class="time">
+			<view class="t-time">
+			<text>时</text>
+			<text>间 :</text>
+			</view>
+			<image class="i-time" src="../../images/detail/48.png"></image>
+		</view>
+		<view class="time_qi">{{}}</view>
+	</view>
+	<view class="Jiantou">
+		<view class="jiantou">
+			<image class="qi-zhong" src="../../images/detail/Group47.png"></image>
+		</view>
+		<view class="jiantou">
+			<image class="qi-zhong" src="../../images/detail/Group46.png"></image>
+		</view>
+	</view>
+	<view class="Time2">
+		<view class="time_zhong">{{}}</view>
+	</view>
 </view>
-<view class="Time">
-	<text class="time">时间：</text>
-	<view class="time_qi">{{}}</view>
-</view>
-<view class="jiantou">
-	<image class="qi" src="../../images/detail/qi.png"></image>
-	<image class="zhuan" src="../../images/detail/right.png"></image>
-	<image class="zhuan" src="../../images/detail/left.png"></image>
-	<image class="zhong" src="../../images/detail/zhong.png"></image>
-</view>
-<view class="Time">
-	<view class="time_zhong">{{}}</view>
-</view>
-<view class="xiang">
-	<text class="neirong">内容：</text>
-	<textarea class="neirong_xiang">{{}}</textarea>
-</view>
-<view class="start_Time">
-	<text class="start">距离开始：</text>
-	<textarea class="stat_time">{{}}</textarea>
-</view>
-<view class="end_Time">
-	<text class="end">距离结束：</text>
-	<textarea class="end_time">{{}}</textarea>
-</view>
-<view class="Beizhu">
-	<text class="beizhu">完成备注：</text>
-	<textarea class="beizhu_xiang">{{}}</textarea>
+<view class="bottom">
+	<view class="xiang">
+		<view class="neirong">
+			<view class="t-neirong">
+				<text>内</text>
+				<text>容 :</text>
+			</view>
+			<image class="i-neirong" src="../../images/detail/48.png"></image>
+		</view>
+		<textarea class="neirong_xiang">{{}}</textarea>
+	</view>
+	<view class="start_Time">
+		<view class="start">
+			<text class="t">距离开始 :</text>
+			<image class="i" src="../../images/detail/49.png"></image>	
+		</view>
+		<textarea class="stat_time">{{}}</textarea>
+	</view>
+	<view class="end_Time">
+		<view class="end">
+			<text class="t">距离结束 :</text>
+			<image class="i" src="../../images/detail/49.png"></image>
+		</view>
+		<textarea class="end_time">{{}}</textarea>
+	</view>
+	<view class="Beizhu">
+		<view class="beizhu">
+			<text class="t">完成备注 :</text>
+			<image class="i" src="../../images/detail/49.png"></image>
+		</view>
+		<textarea class="beizhu_xiang">未填写{{}}</textarea>
+	</view>
 </view>
