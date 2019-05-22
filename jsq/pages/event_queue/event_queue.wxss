@@ -17,8 +17,8 @@ page {
 .Date {
 	margin-left: 56rpx;
 	margin-top:140rpx;
-	width: 200rpx;
-	height: 120rpx;
+	width: 208rpx;
+	height: 110rpx;
 	background-color: rgba(255, 255, 255, 0.4);
 	border-radius: 10px;
 	padding: 0.3125rem;
@@ -26,7 +26,7 @@ page {
 
 .date1 {
 	color: #FFFFFF;
-	font-size: 50rpx;
+	font-size: 43rpx;
 	margin-left: 1px;
 	font-weight:bold;
 }
@@ -112,14 +112,7 @@ page {
 	padding-top: 8rpx;
 }
 
-.text {
-	font-size: 20rpx;
-	color: #AAAAAA;
-}
-
-
-.date {
-	color: #AAAAAA;
+.text,.date {
 	font-size: 20rpx;
 }
 
@@ -210,5 +203,18 @@ page {
 
 .untouch{
 	background-color: #AAAAAA;
+}
+
+.choose{
+	color: #000000;
+}
+
+.unchoose{
+	color: #AAAAAA;
+}
+
+.title{
+	font-size: 20rpx;
+	color: #AAAAAA;
 }
 

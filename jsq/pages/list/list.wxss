@@ -1,6 +1,5 @@
 @import "list-item/list-item-tpl.wxss";
 @import "../../data/new_bg.wxss";
-@import "../../data/tpl/navigation.wxss";
 
 page{
 	background-repeat: no-repeat;
@@ -8,7 +7,7 @@ page{
 }
 
 .container {
-	padding: 38rpx 38rpx 0 38rpx;
+	padding: 108rpx 38rpx 0 38rpx;
 }
 
 .date-box {
@@ -23,12 +22,12 @@ page{
 }
 
 .mouthDay {
-	font-size: 50rpx;
+	font-size: 43rpx;
 	font-weight:bold;
 }
 
 .year-week-box {
-	margin-top: 3px;
+	margin-top: 12rpx;
 	display: flex;
 	justify-content: space-between;
 	font-size: 30rpx;

@@ -22,49 +22,52 @@
 		<view class="Things">
 			<image class="img" src="../../images/new/mulu.png"></image>
 			<view class="thingsname">
-				<input class="thingsName" placeholder="事项主题" maxlength="14" placeholder-style="color:#AAAAAA" />
+				<input class="thingsName" bindinput="thingTitle" placeholder="事项主题" maxlength="14" placeholder-style="color:#AAAAAA" />
 				<!--事项主题填写处-->
 			</view>
 		</view>
 		<view class="Things">
 			<image class="img" src="../../images/new/rili.png"></image>
-			<view class="startTime">
-				<view class="dateXiang">
-					<text class="text">起 始:</text>
+			<picker mode="time" value="{{things.chooseStartTime}}" start="{{startTime}}" end="23:59" bindchange="bindStartTime">
+				<view class="startTime {{isChoose?'choose':'unchoose'}}">
+					<view class="dateXiang">
+						<text class="text">起 始:</text>
+					</view>
+					<view class="dateXiang">
+						<text class="date">{{things.chooseStartTime}}</text>
+						<!--事项开始时间调用-->
+						<image class="xia" src="../../images/new/xia.png"></image>
+						<!--下拉箭头-->
+					</view>
 				</view>
-				<view class="dateXiang">
-					<text class="date">19:30</text>
-					<!--事项开始时间调用-->
-					<image class="xia" src="../../images/new/xia.png"></image>
-					<!--下拉箭头-->
-				</view>
-			</view>
+			</picker>
 			<text style="padding-left: 16rpx;">——</text>
-			<view class="endTime">
-				<view class="dateXiang">
-					<text class="text">结 束:</text>
+			<picker mode="time" value="{{things.chooseEndTime}}" start="{{endTimeStart}}" end="23:59" bindchange="bindEndTime">
+				<view class="endTime {{isChoose?'choose':'unchoose'}}">
+					<view class="dateXiang">
+						<text class="text">结 束:</text>
+					</view>
+					<view class="dateXiang">
+						<text class="date">{{things.chooseEndTime}}</text>
+						<!--事项结束时间调用-->
+						<image class="xia" src="../../images/new/xia.png"></image>
+						<!--下拉箭头-->
+					</view>
 				</view>
-				<view class="dateXiang">
-
-					<text class="date">19:30</text>
-					<!--事项结束时间调用-->
-					<image class="xia" src="../../images/new/xia.png"></image>
-					<!--下拉箭头-->
-				</view>
-			</view>
+			</picker>
 		</view>
 		<view class="Things">
 			<image class="img" src="../../images/new/group5.png"></image>
 			<view class="thingsXiang">
-				<text class="text">事项内容</text>
-				<textarea class="thingsxiang" maxlength="-1" />
+				<text class="title">事项内容</text>
+				<textarea class="thingsxiang" bindinput="thingContent" maxlength="-1" />
 				<!--事项具体内容填写-->
 			</view>
 		</view>
 		<view class="Things">
 			<image class="img" src="../../images/new/group1.png"></image>
 			<view class="importance">
-				<text class="text">重要程度</text>
+				<text class="title">重要程度</text>
 				<view class="imporTance">
 					<view class="imp {{isTouch1?'touch1':'untouch'}}" catchtap="isTouch1">
 						<text>极其重要</text>
@@ -83,7 +86,7 @@
 		</view>
 		<view class="Thingsx"></view>
 		<view  catchtap="onTapJump" class="complete">
-			<text class="Complete">完成</text>    <!--完成，也为点击事件已经建好，请关联函数-->
+			<text class="Complete">完成</text>
 		</view>
 	</view>
 </view>

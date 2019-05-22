@@ -1,9 +1,7 @@
 <import src="list-item/list-item-tpl.wxml" />
-<import src="../../data/tpl/navigation.wxml" />
-<template is="navigation"></template>
 <view class="container">
 	<view class="date-box">
-		<text class="mouthDay">{{dateList[idx].date}}</text>
+		<text class="mouthDay">{{dateList[idx].month}}月 {{dateList[idx].day}}日</text>
 		<view class="year-week-box">
 			<text class="year">{{dateList[idx].year}}</text>
 			<text class="week">{{dateList[idx].week}}</text>
@@ -72,6 +70,6 @@
 	</scroll-view>
 
 	<view class="footer">
-		<image class="button-new" src="../../images/list/input.png"></image>
+		<image class="button-new" catchtap="jumpNew" src="../../images/list/input.png"></image>
 	</view>
 </view>

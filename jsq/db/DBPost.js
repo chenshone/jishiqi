@@ -1,39 +1,147 @@
-class DBPost{
+class DBPost {
 	constructor(url) {
-	    this.storageKeyName = 'dateList';
+		this.keyDateList = 'dateList';
+		this.keyDateListNum = 'dateListNum';
+		this.keyDateListLen = 'dateListLen';
 	}
-	
-	getAllPostData(){
-		let res = wx.setStorageSync(this.storageKeyName);
-		if(!res){
-			res = require('../data/date.js').dateList;
-			this.execSetStorageSync(res);
-		}
+
+	getAllPostData() {
+		let res = wx.getStorageSync(this.keyDateList);
 		return res;
 	}
-	
-	getAllPostDataNum(){
-		let res = wx.setStorageSync(this.storageKeyName);
-		if(!res){
-			res = require('../data/date.js').dateListNum;
-			this.execSetStorageSync(res);
-		}
+
+	getAllPostDataNum() {
+		let res = wx.getStorageSync(this.keyDateListNum);
 		return res;
 	}
-	
-	getAllPostDataLen(){
-		let res = wx.setStorageSync(this.storageKeyName);
-		if(!res){
-			res = require('../data/date.js').dateListLen;
-			this.execSetStorageSync(res);
-		}
+
+	getAllPostDataLen() {
+		let res = wx.getStorageSync(this.keyDateListLen);
 		return res;
 	}
-	
+
 	//保存或更新缓存
-	execSetStorageSync(data){
-		wx.setStorageSync(this.storageKeyName,data);
+	execSetdateList(key,data) {
+		wx.setStorageSync(key, data);
+	}
+	execSetdateListNum() {
+		let list = wx.getStorageSync(this.keyDateList);
+		let ListNum = [];
+		let j = 0;
+		for (let i of list) {
+			let a = 0,
+				b = 0,
+				c = 0,
+				d = 0;
+			for (let k of i.things) {
+				if (k.level === 1) a++;
+				else if (k.level === 2) b++;
+				else if (k.level === 3) c++;
+				else d++;
+			}
+			ListNum[j] = {
+				allNum: i.things.length,
+				aNum: a,
+				bNum: b,
+				cNum: c,
+				dNum: d
+			}
+			j++;
+		}
+		wx.setStorageSync(this.keyDateListNum,ListNum);
+	}
+	execSetdateListLen() {
+		let len = wx.getStorageSync(this.keyDateList).length;
+		wx.setStorageSync(this.keyDateListLen,len);
+	}
+
+	//更新列表缓存
+	updateDateList(data) {
+		let listLen = this.getAllPostDataLen();
+		let list = this.getAllPostData();
+		const self = this;
+		if (listLen == 7) {
+			wx.showModal({
+				title: '提示',
+				content: '您的计划数已达7天了哦,是否清空并开始新的7天呢？', //建议重想文案
+				success(res) {
+					if (res.confirm) {
+						list = [];
+						list.push({
+							month: data.month,
+							day: data.day,
+							year: data.year,
+							week: data.week,
+							things: [data.things]
+						});
+						//更新缓存
+						self.execSetdateList(self.keyDateList,list);
+						self.execSetdateListLen();
+						self.execSetdateListNum();
+							wx.reLaunch({
+								url: '/pages/list/list'
+							})
+					} else if (res.cancel) {
+						data.isFinshed = false;
+					}
+				}
+			})
+
+		}
+		else if(!list){   //list是否为空
+			list = []; 
+			list.push({
+				month: data.month,
+				day: data.day,
+				year: data.year,
+				week: data.week,
+				things: [data.things]
+			})
+			//更新缓存
+			this.execSetdateList(self.keyDateList,list);
+			self.execSetdateListLen();
+			self.execSetdateListNum();
+			if (data.isFinshed) {
+				wx.reLaunch({
+					url: '/pages/list/list'
+				})
+			}
+		}
+		//是否为同一天的记录
+		else if (list[listLen - 1].day == data.day && list[listLen - 1].month == data.month && list[listLen - 1].year ==
+			data.year) {
+			let things = list[listLen - 1].things;
+			things.unshift(data.things);
+			//更新缓存
+			this.execSetdateList(self.keyDateList,list);
+			self.execSetdateListLen();
+			self.execSetdateListNum();
+			if (data.isFinshed) {
+				wx.reLaunch({
+					url: '/pages/list/list'
+				})
+			}
+		} else {
+			list.push({
+				month: data.month,
+				day: data.day,
+				year: data.year,
+				week: data.week,
+				things: [data.things]
+			})
+			//更新缓存
+			this.execSetdateList(self.keyDateList,list);
+			self.execSetdateListLen();
+			self.execSetdateListNum();
+			if (data.isFinshed) {
+				wx.reLaunch({
+					url: '/pages/list/list'
+				})
+			}
+		}
 	}
 };
 
-export {DBPost}
+export {
+	DBPost
+}

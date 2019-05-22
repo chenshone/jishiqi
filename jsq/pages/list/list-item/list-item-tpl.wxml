@@ -3,7 +3,9 @@
 	<view class="line-short-right"></view>
 	<view class="new-notes style1" wx:if="{{level==1}}">
 		<view class="new-notes-header">
-			<view class="new-notes-header-time-1">{{time}} {{title}}</view>
+			<view class="new-notes-header-time-1">
+				<text>{{startTime}} {{title}}</text>
+			</view>
 			<view class="new-notes-header-circle"></view>
 		</view>
 		<view class="new-notes-content">
@@ -32,7 +34,9 @@
 
 	<view class="new-notes style2" wx:elif="{{level==2}}">
 		<view class="new-notes-header">
-			<view class="new-notes-header-time-1">{{time}} {{title}}</view>
+			<view class="new-notes-header-time-1">
+				<text>{{startTime}} {{title}}</text>
+			</view>
 			<view class="new-notes-header-circle"></view>
 		</view>
 		<view class="new-notes-content">
@@ -62,7 +66,9 @@
 
 	<view class="new-notes style3" wx:elif="{{level==3}}">
 		<view class="new-notes-header">
-			<view class="new-notes-header-time-1">{{time}} {{title}}</view>
+			<view class="new-notes-header-time-1">
+				<text>{{startTime}} {{title}}</text>
+			</view>
 			<view class="new-notes-header-circle"></view>
 		</view>
 		<view class="new-notes-content">
@@ -92,7 +98,9 @@
 
 	<view class="new-notes style4" wx:else>
 		<view class="new-notes-header">
-			<view class="new-notes-header-time-1">{{time}} {{title}}</view>
+			<view class="new-notes-header-time-1">
+				<text>{{startTime}} {{title}}</text>
+			</view>
 			<view class="new-notes-header-circle"></view>
 		</view>
 		<view class="new-notes-content">
@@ -126,7 +134,9 @@
 	<view class="new-notes style1" wx:if="{{level==1}}">
 		<view class="new-notes-header">
 			<view class="new-notes-header-circle"></view>
-			<view class="new-notes-header-time">{{time}} {{title}}</view>
+			<view class="new-notes-header-time">
+				<text>{{startTime}} {{title}}</text>
+			</view>
 		</view>
 		<view class="new-notes-content">
 			<text class="new-notes-content-txt">{{content}}</text>
@@ -155,7 +165,9 @@
 	<view class="new-notes style2" wx:elif="{{level==2}}">
 		<view class="new-notes-header">
 			<view class="new-notes-header-circle"></view>
-			<view class="new-notes-header-time">{{time}} {{title}}</view>
+			<view class="new-notes-header-time">
+				<text>{{startTime}} {{title}}</text>
+			</view>
 		</view>
 		<view class="new-notes-content">
 			<text class="new-notes-content-txt">{{content}}</text>
@@ -184,7 +196,9 @@
 	<view class="new-notes style3" wx:elif="{{level==3}}">
 		<view class="new-notes-header">
 			<view class="new-notes-header-circle"></view>
-			<view class="new-notes-header-time">{{time}} {{title}}</view>
+			<view class="new-notes-header-time">
+				<text>{{startTime}} {{title}}</text>
+			</view>
 		</view>
 		<view class="new-notes-content">
 			<text class="new-notes-content-txt">{{content}}</text>
@@ -213,7 +227,9 @@
 	<view class="new-notes style4" wx:else>
 		<view class="new-notes-header">
 			<view class="new-notes-header-circle"></view>
-			<view class="new-notes-header-time">{{time}} {{title}}</view>
+			<view class="new-notes-header-time">
+				<text>{{startTime}} {{title}}</text>
+			</view>
 		</view>
 		<view class="new-notes-content">
 			<text class="new-notes-content-txt">{{content}}</text>

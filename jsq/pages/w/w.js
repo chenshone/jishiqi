@@ -1,7 +1,6 @@
 // pages/w/w.js
 Page({
 	onReady: function() {
-
 		var isFirst = wx.getStorageSync('isFirst');
 		if (!isFirst) {
 			wx.setStorageSync('isFirst', true)

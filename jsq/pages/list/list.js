@@ -1,5 +1,7 @@
 import {DBPost} from '../../db/DBPost.js';
 
+//https://www.jianshu.com/p/df43f1983eab  倒计时
+
 Page({
 
 	/**
@@ -17,6 +19,7 @@ Page({
 	 */
 	onLoad: function(options) {
 		var dbPost = new DBPost();
+		//载入数据
 		this.setData({
 			dateList:dbPost.getAllPostData(),
 			len:dbPost.getAllPostDataLen(),
@@ -27,6 +30,7 @@ Page({
 	},
 
 	onReady: function() {
+		//计算日期轴一小段长度
 		if(this.data.len>0){
 			const query = wx.createSelectorQuery()
 			query.select('#block').boundingClientRect()
@@ -41,14 +45,26 @@ Page({
 		
 
 	},
-
+	
+	onShow:function () {
+		var dbPost = new DBPost();
+		this.setData({
+			dateList:dbPost.getAllPostData(),
+			len:dbPost.getAllPostDataLen(),
+			listNum:dbPost.getAllPostDataNum(),
+			idx:dbPost.getAllPostDataLen() - 1,
+			idxEnd:dbPost.getAllPostDataLen() - 1
+		})
+	},
+	
+	//记录移动初始位置
 	changeStart: function(event) {
 		let cX = event.touches[0].pageX;
 		this.setData({
 			CX: cX
 		})
 	},
-
+	//改变日期
 	changeDate: function(event) {
 		let cX = event.touches[0].pageX;
 		cX = cX - this.data.CX;
@@ -60,17 +76,25 @@ Page({
 			})
 		}
 	},
+	//完成动作时更新最新flag
  	changeEnd:function(event){
 		this.setData({
 			idxEnd:this.data.idx,
 			localEnd:this.data.unit*(this.data.len - this.data.idx - 1)
 		})
  	},
-	
+	//特殊情况
 	changeCanel:function(event){
 		this.setData({
 			idxEnd:this.data.idx,
 			localEnd:this.data.unit*(this.data.len - this.data.idx - 1)
+		})
+	},
+	
+	//new按钮
+	jumpNew:function(){
+		wx.navigateTo({
+			url:'../event_queue/event_queue'
 		})
 	}
 	
