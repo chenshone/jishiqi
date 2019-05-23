@@ -53,16 +53,16 @@
 		</view>
 		<view class="content-body">
 			<block wx:for="{{dateList[idx].things}}" wx:for-item="item" wx:for-index="index">
-				<view class="view-left" wx:if="{{index==0}}">
+				<view class="view-left" wx:if="{{index==0}}" catchtap="onTapToDetail" data-date-id="{{idx}}" data-item-id="{{index}}">
 					<template is="newItemTpl-2" data="{{...item}}"></template>
 				</view>
-				<view class="view-right pad" wx:elif="{{index==1}}">
+				<view class="view-right pad" wx:elif="{{index==1}}" catchtap="onTapToDetail" data-date-id="{{idx}}" data-item-id="{{index}}">
 					<template is="newItemTpl-1" data="{{...item}}"></template>
 				</view>
-				<view class="view-left remar" wx:elif="{{index%2==0}}">
+				<view class="view-left remar" wx:elif="{{index%2==0}}" catchtap="onTapToDetail" data-date-id="{{idx}}" data-item-id="{{index}}">
 					<template is="newItemTpl-2" data="{{...item}}"></template>
 				</view>
-				<view class="view-right" wx:else>
+				<view class="view-right" wx:else catchtap="onTapToDetail" data-date-id="{{idx}}" data-item-id="{{index}}">
 					<template is="newItemTpl-1" data="{{...item}}"></template>
 				</view>
 			</block>

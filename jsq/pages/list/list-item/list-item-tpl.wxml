@@ -17,7 +17,7 @@
 					开始:
 				</text>
 				<text class="new-notes-footer-start-countdown">
-					03小时05分
+					{{chooseStartTime}}
 				</text>
 			</view>
 
@@ -26,7 +26,7 @@
 					结束:
 				</text>
 				<text class="new-notes-footer-end-countdown">
-					03小时05分
+					{{chooseEndTime}}
 				</text>
 			</view>
 		</view>
@@ -48,7 +48,7 @@
 					开始:
 				</text>
 				<text class="new-notes-footer-start-countdown">
-					03小时05分
+					{{chooseStartTime}}
 				</text>
 			</view>
 
@@ -57,7 +57,7 @@
 					结束:
 				</text>
 				<text class="new-notes-footer-end-countdown">
-					03小时05分
+					{{chooseEndTime}}
 				</text>
 			</view>
 
@@ -80,7 +80,7 @@
 					开始:
 				</text>
 				<text class="new-notes-footer-start-countdown">
-					03小时05分
+					{{chooseStartTime}}
 				</text>
 			</view>
 
@@ -89,7 +89,7 @@
 					结束:
 				</text>
 				<text class="new-notes-footer-end-countdown">
-					03小时05分
+					{{chooseEndTime}}
 				</text>
 			</view>
 
@@ -112,7 +112,7 @@
 					开始:
 				</text>
 				<text class="new-notes-footer-start-countdown">
-					03小时05分
+					{{chooseStartTime}}
 				</text>
 			</view>
 
@@ -121,7 +121,7 @@
 					结束:
 				</text>
 				<text class="new-notes-footer-end-countdown">
-					03小时05分
+					{{chooseEndTime}}
 				</text>
 			</view>
 		</view>
@@ -147,7 +147,7 @@
 					开始:
 				</text>
 				<text class="new-notes-footer-start-countdown">
-					03小时05分
+					{{chooseStartTime}}
 				</text>
 			</view>
 
@@ -156,7 +156,7 @@
 					结束:
 				</text>
 				<text class="new-notes-footer-end-countdown">
-					03小时05分
+					{{chooseEndTime}}
 				</text>
 			</view>
 		</view>
@@ -178,7 +178,7 @@
 					开始:
 				</text>
 				<text class="new-notes-footer-start-countdown">
-					03小时05分
+					{{chooseStartTime}}
 				</text>
 			</view>
 
@@ -187,7 +187,7 @@
 					结束:
 				</text>
 				<text class="new-notes-footer-end-countdown">
-					03小时05分
+					{{chooseEndTime}}
 				</text>
 			</view>
 		</view>
@@ -209,7 +209,7 @@
 					开始:
 				</text>
 				<text class="new-notes-footer-start-countdown">
-					03小时05分
+					{{chooseStartTime}}
 				</text>
 			</view>
 
@@ -218,7 +218,7 @@
 					结束:
 				</text>
 				<text class="new-notes-footer-end-countdown">
-					03小时05分
+					{{chooseEndTime}}
 				</text>
 			</view>
 		</view>
@@ -240,7 +240,7 @@
 					开始:
 				</text>
 				<text class="new-notes-footer-start-countdown">
-					03小时05分
+					{{chooseStartTime}}
 				</text>
 			</view>
 
@@ -249,7 +249,7 @@
 					结束:
 				</text>
 				<text class="new-notes-footer-end-countdown">
-					03小时05分
+					{{chooseEndTime}}
 				</text>
 			</view>
 		</view>

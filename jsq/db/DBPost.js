@@ -1,8 +1,10 @@
 class DBPost {
-	constructor(url) {
+	constructor(dateId,itemId) {
 		this.keyDateList = 'dateList';
 		this.keyDateListNum = 'dateListNum';
 		this.keyDateListLen = 'dateListLen';
+		this.dateId = dateId;
+		this.itemId = itemId;
 	}
 
 	getAllPostData() {
@@ -21,7 +23,7 @@ class DBPost {
 	}
 
 	//保存或更新缓存
-	execSetdateList(key,data) {
+	execSetdateList(key, data) {
 		wx.setStorageSync(key, data);
 	}
 	execSetdateListNum() {
@@ -48,11 +50,18 @@ class DBPost {
 			}
 			j++;
 		}
-		wx.setStorageSync(this.keyDateListNum,ListNum);
+		wx.setStorageSync(this.keyDateListNum, ListNum);
 	}
 	execSetdateListLen() {
 		let len = wx.getStorageSync(this.keyDateList).length;
-		wx.setStorageSync(this.keyDateListLen,len);
+		wx.setStorageSync(this.keyDateListLen, len);
+	}
+
+	//更新全部缓存
+	updateStorageSnyc(key, value, self) {
+		self.execSetdateList(key, value);
+		self.execSetdateListLen();
+		self.execSetdateListNum();
 	}
 
 	//更新列表缓存
@@ -60,7 +69,37 @@ class DBPost {
 		let listLen = this.getAllPostDataLen();
 		let list = this.getAllPostData();
 		const self = this;
-		if (listLen == 7) {
+		//是否为空
+		if (!list) {
+			list = [];
+			list.push({
+				month: data.month,
+				day: data.day,
+				year: data.year,
+				week: data.week,
+				things: [data.things]
+			})
+			//更新缓存
+			this.updateStorageSnyc(self.keyDateList, list, self);
+			wx.reLaunch({
+				url: '/pages/list/list'
+			})
+		}
+
+		//是否为同一天的记录
+		else if (list[listLen - 1].day == data.day && list[listLen - 1].month == data.month && list[listLen - 1].year ==
+			data.year) {
+			let things = list[listLen - 1].things;
+			things.unshift(data.things);
+			//更新缓存
+			this.updateStorageSnyc(self.keyDateList, list, self);
+			wx.reLaunch({
+				url: '/pages/list/list'
+			})
+		}
+
+		//是否超过7天
+		else if (listLen == 7) {
 			wx.showModal({
 				title: '提示',
 				content: '您的计划数已达7天了哦,是否清空并开始新的7天呢？', //建议重想文案
@@ -75,52 +114,14 @@ class DBPost {
 							things: [data.things]
 						});
 						//更新缓存
-						self.execSetdateList(self.keyDateList,list);
-						self.execSetdateListLen();
-						self.execSetdateListNum();
-							wx.reLaunch({
-								url: '/pages/list/list'
-							})
-					} else if (res.cancel) {
-						data.isFinshed = false;
+						self.updateStorageSnyc(self.keyDateList, list, self);
+						wx.reLaunch({
+							url: '/pages/list/list'
+						})
 					}
 				}
 			})
 
-		}
-		else if(!list){   //list是否为空
-			list = []; 
-			list.push({
-				month: data.month,
-				day: data.day,
-				year: data.year,
-				week: data.week,
-				things: [data.things]
-			})
-			//更新缓存
-			this.execSetdateList(self.keyDateList,list);
-			self.execSetdateListLen();
-			self.execSetdateListNum();
-			if (data.isFinshed) {
-				wx.reLaunch({
-					url: '/pages/list/list'
-				})
-			}
-		}
-		//是否为同一天的记录
-		else if (list[listLen - 1].day == data.day && list[listLen - 1].month == data.month && list[listLen - 1].year ==
-			data.year) {
-			let things = list[listLen - 1].things;
-			things.unshift(data.things);
-			//更新缓存
-			this.execSetdateList(self.keyDateList,list);
-			self.execSetdateListLen();
-			self.execSetdateListNum();
-			if (data.isFinshed) {
-				wx.reLaunch({
-					url: '/pages/list/list'
-				})
-			}
 		} else {
 			list.push({
 				month: data.month,
@@ -130,14 +131,22 @@ class DBPost {
 				things: [data.things]
 			})
 			//更新缓存
-			this.execSetdateList(self.keyDateList,list);
-			self.execSetdateListLen();
-			self.execSetdateListNum();
-			if (data.isFinshed) {
-				wx.reLaunch({
-					url: '/pages/list/list'
-				})
-			}
+			this.updateStorageSnyc(self.keyDateList, list, self);
+			wx.reLaunch({
+				url: '/pages/list/list'
+			})
+		}
+	}
+	
+	//获得指定事件的数据
+	getListItemById(){
+		let list = this.getAllPostData();
+		let dateItem = list[this.dateId];
+		return {
+			item:dateItem.things[this.itemId],
+			year:dateItem.year,
+			month:dateItem.month,
+			day:dateItem.day
 		}
 	}
 };

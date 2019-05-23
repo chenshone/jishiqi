@@ -5,8 +5,5 @@
 		"pages/eventName/eventName",
 		"pages/event_queue/event_queue"
   ],
-  "window": {
-    "navigationStyle": "custom"
-  },
   "sitemapLocation": "sitemap.json"
 }

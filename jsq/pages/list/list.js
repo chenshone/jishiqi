@@ -1,12 +1,7 @@
 import {DBPost} from '../../db/DBPost.js';
 
-//https://www.jianshu.com/p/df43f1983eab  倒计时
-
 Page({
 
-	/**
-	 * 页面的初始数据
-	 */
 	data: {
 		CX: 0,
 		unit: 0,
@@ -14,9 +9,6 @@ Page({
 		localEnd:0
 	},
 
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
 	onLoad: function(options) {
 		var dbPost = new DBPost();
 		//载入数据
@@ -42,19 +34,6 @@ Page({
 				})
 			})
 		}
-		
-
-	},
-	
-	onShow:function () {
-		var dbPost = new DBPost();
-		this.setData({
-			dateList:dbPost.getAllPostData(),
-			len:dbPost.getAllPostDataLen(),
-			listNum:dbPost.getAllPostDataNum(),
-			idx:dbPost.getAllPostDataLen() - 1,
-			idxEnd:dbPost.getAllPostDataLen() - 1
-		})
 	},
 	
 	//记录移动初始位置
@@ -95,6 +74,15 @@ Page({
 	jumpNew:function(){
 		wx.navigateTo({
 			url:'../event_queue/event_queue'
+		})
+	},
+	
+	//进入详情页
+	onTapToDetail:function(event){
+		let dateId = event.currentTarget.dataset.dateId;
+		let itemId = event.currentTarget.dataset.itemId;
+		wx.navigateTo({
+			url:'../eventName/eventName?dateId='+dateId+'&itemId='+itemId,
 		})
 	}
 	

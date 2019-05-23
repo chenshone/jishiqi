@@ -9,7 +9,6 @@ Page({
 		isTouch3:false,
 		isTouch4:false,
 		isChoose:false,
-		isFinshed:false,
 		things:{
 			title:"",
 			content:"",
@@ -20,11 +19,9 @@ Page({
 	onLoad: function(options) {
 		const things = this.data.things;
 		let time = util.formatTime(new Date());  //获取年份日期时间
+		let timeLater = util.formatTime(new Date(new Date().getTime()+1000*60)); //获取一分钟后的时间
 		let nowTime = time.substr(-8,5);//获取时间 hh:mm
-		//将结束时间加1min
-		let endTimeStartArr = nowTime.split("");
-		endTimeStartArr[endTimeStartArr.length-1] =(parseInt(endTimeStartArr[endTimeStartArr.length-1]) + 1).toString();
-		let endTimeStart = endTimeStartArr.join("");
+		let endTimeStart = timeLater.substr(-8,5);
 		let date = util.getDates(time);  //过去年份日期星期
 		let dateArr = [];
 		dateArr = date[0].time.split("-"); //分割字符串
@@ -115,8 +112,27 @@ Page({
 	bindStartTime:function(e){
 		const things = this.data.things;
 		//将结束时间同步加1min
-		let endTimeStartArr = e.detail.value.split("");
-		endTimeStartArr[endTimeStartArr.length-1] =(parseInt(endTimeStartArr[endTimeStartArr.length-1]) + 1).toString();
+		let endTimeStartArr = e.detail.value.split(":").map(Number).join("");
+		endTimeStartArr = parseInt(endTimeStartArr)+1;
+		console.log(endTimeStartArr%100)
+		if(endTimeStartArr%100 == 60){
+			endTimeStartArr = endTimeStartArr+40;
+		}
+		if(endTimeStartArr == 2400){
+			endTimeStartArr = 2359
+		}
+		if(endTimeStartArr>999){
+			endTimeStartArr = endTimeStartArr.toString()
+			endTimeStartArr = endTimeStartArr.split("");
+			endTimeStartArr.splice(2,0,":")
+		}
+		else{
+			endTimeStartArr = endTimeStartArr.toString()
+			endTimeStartArr = endTimeStartArr.split("");
+			endTimeStartArr.unshift("0");
+			endTimeStartArr.splice(2,0,":");
+		}
+		console.log(endTimeStartArr)		
 		let endTimeStart = endTimeStartArr.join("");
 		this.setData({
 			['things.chooseStartTime']:e.detail.value,
@@ -149,8 +165,10 @@ Page({
 		})
 	},
 	
+	
 	//完成按钮
 	onTapJump:function(){
+		console.log('wancheng')
 		var dbPost = new DBPost();
 		const things = this.data.things;
 		//信息是否填写完全
@@ -161,9 +179,6 @@ Page({
 				mask:true
 			})
 		} else {
-			this.setData({
-				isFinshed:true
-			});
 			dbPost.updateDateList(this.data);
 		}
 	 }
