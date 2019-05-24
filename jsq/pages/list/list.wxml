@@ -34,16 +34,16 @@
 	</view>
 	<view class="todoDetails">
 		<view class="todoDetails-word">
-			<text>极其重要</text>
-			<text>重要</text>
-			<text>一般</text>
-			<text>休闲</text>
+			<text class="level-1">极其重要</text>
+			<text class="level-2">重要</text>
+			<text class="level-3">一般</text>
+			<text class="level-4">休闲</text>
 		</view>
 		<view class="todoDetails-num">
-			<text>{{listNum[idx].aNum}}</text>
-			<text>{{listNum[idx].bNum}}</text>
-			<text>{{listNum[idx].cNum}}</text>
-			<text>{{listNum[idx].dNum}}</text>
+			<text class="level-1">{{listNum[idx].aNum}}</text>
+			<text class="level-2">{{listNum[idx].bNum}}</text>
+			<text class="level-3">{{listNum[idx].dNum}}</text>
+			<text class="level-4">{{listNum[idx].cNum}}</text>
 		</view>
 	</view>
 

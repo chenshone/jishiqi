@@ -12,7 +12,8 @@ Page({
 		things:{
 			title:"",
 			content:"",
-			level:0
+			level:0,
+			finishedTxt:""
 		}
 	},
 	
@@ -143,7 +144,6 @@ Page({
 	},
 	//选择结束时间
 	bindEndTime:function(e){
-		const things = this.data.things;
 		this.setData({
 			['things.chooseEndTime']:e.detail.value,
 			isChoose:true
@@ -152,25 +152,25 @@ Page({
 	
 	//获取标题
 	thingTitle:function(e){
-		const things = this.data.things;
 		this.setData({
 			['things.title']:e.detail.value
 		})
 	},
 	//获取内容
 	thingContent:function(e){
-		const things = this.data.things;
 		this.setData({
 			['things.content']:e.detail.value
-		})
+		});
 	},
 	
 	
 	//完成按钮
 	onTapJump:function(){
-		console.log('wancheng')
 		var dbPost = new DBPost();
 		const things = this.data.things;
+		this.setData({
+			['things.finished']:false
+		})
 		//信息是否填写完全
 		if(things.title == "" || things.content == "" || things.level == 0){
 			wx.showToast({

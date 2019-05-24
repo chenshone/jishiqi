@@ -26,7 +26,6 @@
 }
 
 .event-xiang {
-	color: #AAAAAA;
 	font-size: 15px;
 	width: 100%;
 	height: 50rpx;
@@ -67,7 +66,6 @@
 }
 
 .start-circle,.end-circle {
-	color: #AAAAAA;
 	border: 1px solid #000000;
 	border-radius: 50%;
 	font-size: 20rpx;
@@ -113,7 +111,6 @@
 
 .time_qi {
 	font-size: 30rpx;
-	color: #A2A2A2;
 	height: 50rpx;
 	margin-left: 10rpx;
 }
@@ -121,7 +118,6 @@
 .time_zhong {
 	padding-top: 14rpx;
 	font-size: 30rpx;
-	color: #A2A2A2;
 	margin-left: 10rpx;
 	height: 50rpx;
 	border-bottom: 1px solid #AAAAAA;
@@ -153,69 +149,37 @@
 
 .content-detail {
 	font-size: 15px;
-	color: #A2A2A2;
 	width: 486.4rpx;
 	border-bottom: 1px solid #AAAAAA;
 	margin-left: 10rpx;
 	word-break: break-all;
 }
 
-.start_Time {
+.start_Time,.end_Time,.Beizhu {
 	display: flex;
 	margin-top: 50rpx;
 }
 
-.stat_time {
+.stat_time,.end_time  {
 	font-size: 15px;
-	color: #A2A2A2;
 	height: 50rpx;
 	width: 495rpx;
 	border-bottom: 1px solid #AAAAAA;
 }
 
-.start {
+.start,.end,.beizhu {
 	display: flex;
 	flex-direction: column;
 }
 
-.end_Time {
-	display: flex;
-	margin-top: 50rpx;
-}
-
-.end {
-	display: flex;
-	flex-direction: column;
-}
-
-.end_time {
-	font-size: 15px;
-	color: #A2A2A2;
-	height: 50rpx;
-	width: 495rpx;
-	border-bottom: 1px solid #AAAAAA;
-}
-
-.Beizhu {
-	margin-top: 50rpx;
-	display: flex;
-}
-
-.beizhu {
-	display: flex;
-	flex-direction: column;
-}
 
 .beizhu_xiang {
 	font-size: 15px;
-	color: #A2A2A2;
 	width: 540rpx;
-	height: 100rpx;
 }
 
 .t {
 	font-size: 15px;
-	color: #000000;
 	height: 50rpx;
 }
 
@@ -231,4 +195,76 @@
 .end,
 .beizhu {
 	margin-right: 30rpx;
+}
+
+.footer{
+	position: absolute;
+	width: 100%;
+	bottom: 70rpx;
+	color: #d81e06;
+}
+
+.footer-view{
+	display: flex;
+	flex-flow: row-reverse;
+	margin-right: 100rpx;
+	justify-content: space-between;
+}
+
+.btn-del,.btn-ok,.box{
+	display: flex;
+	align-items: center;
+	font-size: 28rpx;
+}
+
+.box{
+	width: 156rpx;
+}
+
+.btn-finished{
+	font-size: 40rpx;
+	border: 4rpx solid #d81e06;
+	border-radius: 40rpx;
+	width: 250rpx;
+	height: 70rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box-del{
+	border-bottom: 3.5rpx solid #d81e06;
+	display: flex;
+	align-content: center;
+	padding-bottom: 4rpx;
+}
+
+.box-del text{
+	padding-top: 4rpx;
+}
+
+.img-del,.img-ok{
+	width: 44rpx;
+	height: 44rpx;
+}
+
+.line{
+	width: 2rpx;
+	height: 108rpx;
+	background-color: #d81e06;
+}
+
+.isok{
+	display: flex;
+	flex-flow: row-reverse;
+	width: 330rpx;
+	justify-content: space-between;
+}
+
+.box-center{
+	justify-content: center;
+}
+
+.txt-finished{
+	padding-right: 4rpx;
 }

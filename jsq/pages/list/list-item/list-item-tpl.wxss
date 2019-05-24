@@ -44,21 +44,20 @@
 
 .style1 {
 	background-image: linear-gradient(0deg,
-		#ff3300 0%,
-		#ffa710 100%);
+		#ffa710 0%,
+		#ff3300 100%);
 }
 
 .style2 {
 	background-image: linear-gradient(0deg,
-		#ff9900 0%,
-		#fee506 100%,
-		#7f5700 100%);
+		#fee506 0%,
+		#ff9900 100%);
 }
 
 .style3 {
 	background-image: linear-gradient(0deg,
-		#00b9ff 0%,
-		#10ffb6 100%);
+		#10ffb6 0%,
+		#00b9ff 100%);
 }
 
 .style4 {
@@ -128,6 +127,7 @@
 	border: 0;
 	border-bottom: 1px solid #ffffff;
 	padding-top: 6rpx;
+	color: #FFFFFF;
 }
 
 .new-notes-content text {
@@ -155,6 +155,12 @@
 	color: #ffffff;
 }
 
+.new-notes-footer-start-countdown,
+.new-notes-footer-end-countdown {
+	font-weight: bold;
+	font-size: 22rpx;
+}
+
 .white-block {
 	border: 0;
 	width: 306rpx;
@@ -170,4 +176,28 @@
 
 .new-notes {
 	padding: 20rpx;
+}
+
+
+.isfinished {
+	background-image: linear-gradient(0deg,
+		#909394 0%,
+		#DBDBDB 100%);
+}
+
+
+.isfinished-circle-1{
+	border: 4rpx solid #ff3434;
+}
+
+.isfinished-circle-2{
+	border: 4rpx solid #f9c85c;
+}
+
+.isfinished-circle-3{
+	border: 4rpx solid #44cef6;
+}
+
+.isfinished-circle-4{
+	border: 4rpx solid #00bc12;
 }

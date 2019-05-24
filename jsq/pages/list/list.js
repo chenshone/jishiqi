@@ -19,6 +19,7 @@ Page({
 			idx:dbPost.getAllPostDataLen() - 1,
 			idxEnd:dbPost.getAllPostDataLen() - 1
 		})
+		console.log(this.data.dateList)
 	},
 
 	onReady: function() {

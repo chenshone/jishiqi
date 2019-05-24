@@ -15,11 +15,13 @@ Page({
 			itemDetail: itemList.item,
 			year: itemList.year,
 			month: itemList.month,
-			day: itemList.day
+			day: itemList.day,
+			itemId: itemId
 		});
+		console.log(this.data)
 	},
 
-	onShow:function(){
+	onShow: function() {
 		//获取开始和结束的完整时间
 		let date = [this.data.year, this.data.month, this.data.day];
 		date = date.join("/");
@@ -37,8 +39,8 @@ Page({
 		this.countDownStart();
 		this.countDownEnd();
 	},
-	
-	
+
+
 	onReady: function() {
 		//动态渲染导航栏
 		wx.setNavigationBarTitle({
@@ -146,4 +148,65 @@ Page({
 	timeFormin(param) {
 		return param < 0 ? 0 : param;
 	},
+
+	isFinished: function() {
+		if (!this.data.end) {
+			wx.showToast({
+				title: '计划还未结束哦',
+				icon: 'none',
+				mask: true
+			})
+		} else {
+			this.setData({
+				['itemDetail.finished']: true
+			})
+		}
+	},
+
+	finishedTxt: function(e) {
+		this.setData({
+			['itemDetail.finishedTxt']:e.detail.value
+		});
+		console.log(this.data.itemDetail)
+	},
+	del: function() {
+		const self = this;
+		wx.showModal({
+			title: '提示',
+			content: '确认删除',
+			success(res) {
+				if (res.confirm) {
+					wx.showToast({
+						title: '删除成功',
+						icon: 'success',
+						mask: true,
+					});
+					self.dbPost.updateDel();
+					if (self.dbPost.getListItemById().itemListLen == 0) {
+						wx.reLaunch({
+							url: '../event_queue/event_queue'
+						})
+					} else {
+						wx.reLaunch({
+							url: '../list/list'
+						})
+					}
+				}
+			}
+		})
+	},
+	
+	ok:function(){
+		const self = this;
+		wx.showToast({
+			title: '保存成功',
+			icon: 'success',
+			mask: true
+		});
+		self.dbPost.updateOk(self.data.itemDetail.finished,self.data.itemDetail.finishedTxt);
+		wx.reLaunch({
+			url:'../list/list'
+		})
+	}
+
 })

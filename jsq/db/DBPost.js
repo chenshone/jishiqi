@@ -143,11 +143,31 @@ class DBPost {
 		let list = this.getAllPostData();
 		let dateItem = list[this.dateId];
 		return {
-			item:dateItem.things[this.itemId],
 			year:dateItem.year,
 			month:dateItem.month,
-			day:dateItem.day
+			day:dateItem.day,
+			item:dateItem.things[this.itemId],
+			itemListLen:dateItem.things.length
 		}
+	}
+	
+	//删除事件
+	updateDel(){
+		const self = this;
+		let list = this.getAllPostData();
+		let dateItem = list[this.dateId];
+		dateItem.things.splice(this.itemId,1)
+		this.updateStorageSnyc(self.keyDateList, list, self);
+	}
+	
+	//存储完成项
+	updateOk(finished,finishedTxt){
+		const self = this;
+		let list = this.getAllPostData();
+		let dateItem = list[this.dateId];
+		dateItem.things[this.itemId].finished = finished;
+		dateItem.things[this.itemId].finishedTxt = finishedTxt;
+		this.updateStorageSnyc(self.keyDateList, list, self);
 	}
 };
 
