@@ -178,7 +178,7 @@ Page({
 						mask: true,
 					});
 					self.dbPost.updateDel();
-					if (self.dbPost.getListItemById().itemListLen == 0) {
+					if (self.dbPost.getAllPostDataLen() == 0) {
 						wx.reLaunch({
 							url: '../event_queue/event_queue'
 						})

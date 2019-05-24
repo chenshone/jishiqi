@@ -156,7 +156,10 @@ class DBPost {
 		const self = this;
 		let list = this.getAllPostData();
 		let dateItem = list[this.dateId];
-		dateItem.things.splice(this.itemId,1)
+		dateItem.things.splice(this.itemId,1);
+		if(dateItem.things.length == 0){
+			list.splice(this.dateId,1);
+		}
 		this.updateStorageSnyc(self.keyDateList, list, self);
 	}
 	
