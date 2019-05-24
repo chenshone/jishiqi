@@ -18,7 +18,6 @@ Page({
 			day: itemList.day,
 			itemId: itemId
 		});
-		console.log(this.data)
 	},
 
 	onShow: function() {
@@ -84,7 +83,6 @@ Page({
 		let hou = parseInt(time % (60 * 60 * 24) / 3600);
 		let min = parseInt(time % (60 * 60 * 24) % 3600 / 60);
 		let sec = parseInt(time % (60 * 60 * 24) % 3600 % 60);
-		// console.log(day + "," + hou + "," + min + "," + sec)
 		hou = that.timeFormin(hou),
 			min = that.timeFormin(min),
 			sec = that.timeFormin(sec)
@@ -118,7 +116,6 @@ Page({
 		let hou = parseInt(time % (60 * 60 * 24) / 3600);
 		let min = parseInt(time % (60 * 60 * 24) % 3600 / 60);
 		let sec = parseInt(time % (60 * 60 * 24) % 3600 % 60);
-		// console.log(day + "," + hou + "," + min + "," + sec)
 		hou = that.timeFormin(hou),
 			min = that.timeFormin(min),
 			sec = that.timeFormin(sec)
@@ -167,7 +164,6 @@ Page({
 		this.setData({
 			['itemDetail.finishedTxt']:e.detail.value
 		});
-		console.log(this.data.itemDetail)
 	},
 	del: function() {
 		const self = this;
