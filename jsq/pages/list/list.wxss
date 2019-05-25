@@ -7,7 +7,7 @@ page{
 }
 
 .container {
-	padding: 108rpx 38rpx 0 38rpx;
+	padding: 15% 38rpx 0 38rpx;
 }
 
 .date-box {
@@ -130,8 +130,9 @@ page{
 }
 
 .content {
-	height: 52vh;
+	height: 47.5vh;
 	width: 669rpx;
+	margin-top: 8rpx;
 }
 
 .middle {
@@ -161,7 +162,9 @@ page{
 .footer {
 	width: 100%;
 	text-align: center;
-	padding-top: 30rpx;
+	position: absolute;
+	bottom:1%;
+	margin-left: -38rpx;
 }
 
 .button-new {
