@@ -11,7 +11,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.8",
+	"libVersion": "2.0.4",
 	"appid": "wx3f4424829a2b3982",
 	"projectname": "jsq",
 	"simulatorType": "wechat",
@@ -34,30 +34,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
-			"list": [
-				{
-					"id": -1,
-					"name": "aaa",
-					"pathName": "pages/event_queue/event_queue",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 1,
-					"name": "bbb",
-					"pathName": "pages/eventName/eventName",
-					"query": "dateId=0&itemId=0",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "asd",
-					"pathName": "pages/list/list",
-					"query": "",
-					"scene": null
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }

@@ -1,0 +1,101 @@
+<view class="container">
+
+	<view class="title-text-view">
+		<view class="title">
+			<view class="title-text">
+				<text>事</text>
+				<text>件:</text>
+			</view>
+			<image class="img-title" src="../../images/detail/49.png"></image>
+		</view>
+		<view class="title-name">{{itemDetail.title}}</view>
+	</view>
+	<view class="time-view">
+		<view class="time">
+			<view class="time-text">
+				<text>时</text>
+				<text>间:</text>
+			</view>
+			<image class="img-time" src="../../images/detail/49.png"></image>
+		</view>
+		<view class="time-content">
+			<view class="time-start">{{year}}年{{month}}月{{day}}日 {{itemDetail.chooseStartTime}}</view>
+			<view class="time-icon">
+				<view class="start-box start-box-border">
+					<view class="start-circle start-circle-border">起</view>
+				</view>
+				<view class="end-box end-box-border">
+					<view class="end-circle end-circle-border">终</view>
+				</view>
+			</view>
+			<view class="time-end">{{year}}年{{month}}月{{day}}日 {{itemDetail.chooseEndTime}}</view>
+		</view>
+	</view>
+	<view class="content-view">
+		<view class="content">
+			<view class="content-text">
+				<text>内</text>
+				<text>容:</text>
+			</view>
+			<image class="img-content" src="../../images/detail/49.png"></image>
+		</view>
+		<view class="content-detail">
+			<text>{{itemDetail.content}}</text>
+		</view>
+	</view>
+	<view class="count-down-start-time-view">
+		<view class="count-down-start">
+			<text class="count-down-start-text">距离开始:</text>
+			<image class="img-count-down-start" src="../../images/detail/49.png"></image>
+		</view>
+		<text wx:if="{{ready && !end && !itemDetail.finished}}" class="count-down-start-time">{{startHou}}:{{startMin}}:{{startSec}}</text>
+		<text wx:if="{{!ready && !end && !itemDetail.finished}}" class="count-down-start-time">已开始</text>
+		<text wx:if="{{end && !itemDetail.finished}}" class="count-down-start-time">已结束</text>
+		<text wx:if="{{itemDetail.finished}}" class="count-down-start-time">已完成</text>
+	</view>
+	<view class="count-down-end-time-view">
+		<view class="count-down-end">
+			<text class="count-down-end-text">距离结束:</text>
+			<image class="img-count-down-end" src="../../images/detail/49.png"></image>
+		</view>
+		<text wx:if="{{ready && !end && !itemDetail.finished}}" class="count-down-end-time">未开始</text>
+		<text wx:if="{{!ready && !end && !itemDetail.finished}}" class="count-down-end-time">{{endHou}}:{{endMin}}:{{endSec}}</text>
+		<text wx:if="{{end && !itemDetail.finished}}" class="count-down-end-time">已结束</text>
+		<text wx:if="{{itemDetail.finished}}" class="count-down-start-time">已完成</text>
+	</view>
+	<view class="note-view" wx:if="{{itemDetail.finished}}">
+		<view class="note">
+			<text class="note-text">完成备注:</text>
+			<image class="img-note" src="../../images/detail/49.png"></image>
+		</view>
+		<textarea class="note-content" maxlength="-1" bindinput="finishedTxt" value="{{itemDetail.finishedTxt}}" />
+		</view>
+
+	<view class="footer">
+		<view wx:if="{{!itemDetail.finished}}" class="footer-view">
+			<view class="btn-del" catchtap="del">
+				<view class="box-del">
+					<image class="img-del" src="../../images/detail/del.png"></image>
+					<text class="txt-del">删除事件</text>
+				</view>
+			</view>
+			<view class="btn-finished" catchtap="isFinished">
+				<text class="txt-finished">已完成</text>
+			</view>
+			<view class="box"></view>
+		</view>
+		<view wx:if="{{itemDetail.finished}}" class="footer-view box-center">
+			<view class="isok">
+				<view class="btn-del" catchtap="del">
+					<image class="img-del" src="../../images/detail/del.png"></image>
+					<text class="txt-del">删除事件</text>
+				</view>
+				<view class="line"></view>
+				<view class="btn-ok" catchtap="ok">
+					<text class="txt-finished">确定</text>
+					<image class="img-ok" src="../../images/detail/ok.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

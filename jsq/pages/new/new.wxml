@@ -1,0 +1,83 @@
+<!--index.wxml-->
+<view class="top">
+	<image class="top-background" src="../../images/new/bg.jpg"></image>
+</view>
+<view class="top-word">
+	<view class="Date">
+		<text class="date1">{{month}}月{{day}}日</text>
+		<view class="date2">
+			<text>{{year}} </text>
+			<text> {{week}}</text>
+		</view>
+	</view>
+</view>
+<view class="thing">
+	<text class="new-thing">新建事项</text>
+</view>
+<view class="list">
+	<view class="container">
+		<view class="tpl-view">
+			<image class="img" src="../../images/new/mulu.png"></image>
+			<view class="event-title">
+				<input class="input-event-title" bindinput="thingTitle" placeholder="事项主题" maxlength="14" placeholder-style="color:#AAAAAA" />
+			</view>
+		</view>
+		<view class="tpl-view">
+			<image class="img" src="../../images/new/rili.png"></image>
+			<picker mode="time" value="{{things.chooseStartTime}}" start="{{startTime}}" end="23:59" bindchange="bindStartTime">
+				<view class="start-time {{isChoose?'choose':'unchoose'}}">
+					<view class="time-content">
+						<text class="text">起 始:</text>
+					</view>
+					<view class="time-content">
+						<text class="choose-start-time">{{things.chooseStartTime}}</text>
+						<image class="icon" src="../../images/new/xia.png"></image>
+					</view>
+				</view>
+			</picker>
+			<text style="padding-left: 16rpx;">——</text>
+			<picker mode="time" value="{{things.chooseEndTime}}" start="{{endTimeStart}}" end="23:59" bindchange="bindEndTime">
+				<view class="end-time {{isChoose?'choose':'unchoose'}}">
+					<view class="time-content">
+						<text class="text">结 束:</text>
+					</view>
+					<view class="time-content">
+						<text class="choose-end-time">{{things.chooseEndTime}}</text>
+						<image class="icon" src="../../images/new/xia.png"></image>
+					</view>
+				</view>
+			</picker>
+		</view>
+		<view class="tpl-view">
+			<image class="img" src="../../images/new/group5.png"></image>
+			<view class="content-view">
+				<text class="title">事项内容</text>
+				<textarea class="thingsxiang" bindinput="thingContent" maxlength="-1"/>
+			</view>
+		</view>
+		<view class="tpl-view">
+			<image class="img" src="../../images/new/group1.png"></image>
+			<view class="importance">
+				<text class="title">重要程度</text>
+				<view class="choose-importance">
+					<view class="imp-tip {{isTouch1?'touch1':'untouch'}}" catchtap="isTouch1">
+						<text>极其重要</text>
+					</view>
+					<view class="imp-tip {{isTouch2?'touch2':'untouch'}}" catchtap="isTouch2">
+						<text>重要</text>
+					</view>
+					<view class="imp-tip {{isTouch3?'touch3':'untouch'}}" catchtap="isTouch3">
+						<text>一般</text>
+					</view>
+					<view class="imp-tip {{isTouch4?'touch4':'untouch'}}" catchtap="isTouch4">
+						<text>休闲</text>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="line"></view>
+		<view catchtap="onTapJump" class="btn-complete">
+			<text class="complete">完成</text>
+		</view>
+	</view>
+</view>

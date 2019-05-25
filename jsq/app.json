@@ -1,9 +1,12 @@
 {
-  "pages": [
-    "pages/w/w",
-    "pages/list/list",
-		"pages/eventName/eventName",
-		"pages/event_queue/event_queue"
-  ],
-  "sitemapLocation": "sitemap.json"
+	"pages": [
+		"pages/w/w",
+		"pages/list/list",
+		"pages/new/new",
+		"pages/detail/detail"
+	],
+	"sitemapLocation": "sitemap.json",
+	"window": {
+		"backgroundTextStyle": "dark"
+	}
 }

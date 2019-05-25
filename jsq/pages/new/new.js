@@ -181,6 +181,29 @@ Page({
 		} else {
 			dbPost.updateDateList(this.data);
 		}
+	 },
+	 
+	 //刷新页面
+	 onPullDownRefresh:function(){
+		 const things = this.data.things;
+		 let time = util.formatTime(new Date());  //获取年份日期时间
+		 let timeLater = util.formatTime(new Date(new Date().getTime()+1000*60)); //获取一分钟后的时间
+		 let nowTime = time.substr(-8,5);//获取时间 hh:mm
+		 let endTimeStart = timeLater.substr(-8,5);
+		 let date = util.getDates(time);  //过去年份日期星期
+		 let dateArr = [];
+		 dateArr = date[0].time.split("-"); //分割字符串
+		 this.setData({
+		 	['things.startTime']:nowTime,
+		 	['things.chooseStartTime']:nowTime,
+		 	['things.chooseEndTime']:endTimeStart,
+		 	endTimeStart:endTimeStart,
+		 	year:dateArr[0],
+		 	month:dateArr[1],
+		 	day:dateArr[2],
+		 	week:date[0].week
+		 });
+		 wx.stopPullDownRefresh();
 	 }
 	
 })

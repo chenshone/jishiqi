@@ -73,7 +73,7 @@ Page({
 	//new按钮
 	jumpNew:function(){
 		wx.navigateTo({
-			url:'../event_queue/event_queue'
+			url:'../new/new'
 		})
 	},
 	
@@ -82,7 +82,7 @@ Page({
 		let dateId = event.currentTarget.dataset.dateId;
 		let itemId = event.currentTarget.dataset.itemId;
 		wx.navigateTo({
-			url:'../eventName/eventName?dateId='+dateId+'&itemId='+itemId,
+			url:'../detail/detail?dateId='+dateId+'&itemId='+itemId,
 		})
 	}
 	

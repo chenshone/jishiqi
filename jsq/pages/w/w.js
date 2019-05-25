@@ -1,15 +1,14 @@
 // pages/w/w.js
 Page({
 	onReady: function() {
-		var isFirst = wx.getStorageSync('isFirst');
-		if (!isFirst) {
-			wx.setStorageSync('isFirst', true)
+		var isFirst = wx.getStorageSync('dateList');
+		if (isFirst.length>0) {
 			wx.reLaunch({
-				url: '/pages/event_queue/event_queue'
+				url: '/pages/list/list'
 			})
 		} else {
 			wx.reLaunch({
-				url: '/pages/list/list'
+				url: '/pages/new/new'
 			})
 		}
 	}

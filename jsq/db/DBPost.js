@@ -1,5 +1,5 @@
 class DBPost {
-	constructor(dateId,itemId) {
+	constructor(dateId, itemId) {
 		this.keyDateList = 'dateList';
 		this.keyDateListNum = 'dateListNum';
 		this.keyDateListLen = 'dateListLen';
@@ -137,34 +137,40 @@ class DBPost {
 			})
 		}
 	}
-	
+
 	//获得指定事件的数据
-	getListItemById(){
+	getListItemById() {
 		let list = this.getAllPostData();
 		let dateItem = list[this.dateId];
 		return {
-			year:dateItem.year,
-			month:dateItem.month,
-			day:dateItem.day,
-			item:dateItem.things[this.itemId],
-			itemListLen:dateItem.things.length
+			year: dateItem.year,
+			month: dateItem.month,
+			day: dateItem.day,
+			item: dateItem.things[this.itemId],
+			itemListLen: dateItem.things.length
 		}
 	}
-	
+
 	//删除事件
-	updateDel(){
+	updateDel() {
 		const self = this;
 		let list = this.getAllPostData();
 		let dateItem = list[this.dateId];
-		dateItem.things.splice(this.itemId,1);
-		if(dateItem.things.length == 0){
-			list.splice(this.dateId,1);
+		dateItem.things.splice(this.itemId, 1);
+		if (dateItem.things.length == 0) {
+			list.splice(this.dateId, 1);
+			if (list.length == 0) {
+				wx.clearStorageSync();
+			} else {
+				this.updateStorageSnyc(self.keyDateList, list, self);
+			}
+		} else {
+			this.updateStorageSnyc(self.keyDateList, list, self);
 		}
-		this.updateStorageSnyc(self.keyDateList, list, self);
 	}
-	
+
 	//存储完成项
-	updateOk(finished,finishedTxt){
+	updateOk(finished, finishedTxt) {
 		const self = this;
 		let list = this.getAllPostData();
 		let dateItem = list[this.dateId];

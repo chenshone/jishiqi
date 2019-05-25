@@ -3,7 +3,7 @@ page {
 	background-color: #e9e9e9;
 }
 
-.topbackground {
+.top-background {
 	width: 100%;
 	height: 408rpx;
 }
@@ -15,6 +15,9 @@ page {
 }
 
 .Date {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 	margin-left: 56rpx;
 	margin-top:140rpx;
 	width: 208rpx;
@@ -65,7 +68,7 @@ page {
 	align-items: center;
 }
 
-.border {
+.container {
 	margin: 0 auto;
 	background-color: #FFFFFF;
 	width: 640rpx;
@@ -73,7 +76,7 @@ page {
 	padding-top: 1rpx;
 }
 
-.Things {
+.tpl-view {
 	margin-top: 60rpx;
 	margin-left: 50rpx;
 	flex-direction: row;
@@ -85,7 +88,7 @@ page {
 	height: 20px;
 }
 
-.thingsname {
+.event-title {
 	width: 466rpx;
 	margin-left: 20rpx;
 	margin-top: -10rpx;
@@ -94,11 +97,11 @@ page {
 	line-height: 50rpx;
 }
 
-.thingsName {
+.input-event-title {
 	font-size: 30rpx;
 }
 
-.startTime ,.endTime {
+.start-time ,.end-time {
 	display: flex;
 	justify-content: space-between;
 	margin-top: -20rpx;
@@ -108,21 +111,21 @@ page {
 	height: 60rpx;
 }
 
-.dateXiang{
+.time-content{
 	padding-top: 8rpx;
 }
 
-.text,.date {
+.text,.choose-start-time,.choose-end-time {
 	font-size: 20rpx;
 }
 
-.xia {
+.icon {
 	width: 30rpx;
 	height: 30rpx;
 }
 
 
-.thingsXiang {
+.content-view {
 	display: flex;
 	flex-direction: column;
 	margin-left: 20rpx;
@@ -144,14 +147,14 @@ page {
 	margin-left: 20rpx;
 }
 
-.imporTance {
+.choose-importance {
 	display: flex;
 	justify-content:space-between;
 	margin-top: 10rpx;
 	width: 470rpx;
 }
 
-.imp {
+.imp-tip {
 	width: 110rpx;
 	height: 46rpx;
 	text-align: center;
@@ -161,13 +164,13 @@ page {
 	color: #FFFFFF;
 }
 
-.Thingsx {
+.line {
 	border-bottom: 1px solid #E9E9E9;
 	margin: 26rpx 0rpx 0 50rpx;
 	width: 544rpx;
 }
 
-.complete {
+.btn-complete {
 	margin-top: 60rpx;
 	border: 2px solid #2AB9E2;
 	width: 240rpx;
@@ -179,7 +182,7 @@ page {
 	padding-bottom: 6rpx;
 }
 
-.Complete {
+.complete {
 	font-size: 36rpx;
 	font-weight: bold;
 	color: #2AB9E2;
