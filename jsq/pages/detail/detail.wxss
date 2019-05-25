@@ -26,7 +26,7 @@
 }
 
 .title-name {
-	font-size: 15px;
+	font-size: 30rpx;
 	width: 100%;
 	height: 50rpx;
 	border-bottom: 1px solid #AAAAAA;
@@ -93,11 +93,12 @@
 
 .time-content {
 	width: 100%;
+	margin-left: 10rpx;
 }
 
 .time-text {
 	color: #ff3434;
-	font-size: 15px;
+	font-size: 30rpx;
 	height: 51rpx;
 	width: 125rpx;
 	display: flex;
@@ -134,7 +135,7 @@
 }
 
 .content-text {
-	font-size: 15px;
+	font-size: 30rpx;
 	color: #000000;
 	display: flex;
 	justify-content: space-between;
@@ -145,10 +146,8 @@
 	height: 10rpx;
 }
 
-
-
 .content-detail {
-	font-size: 15px;
+	font-size: 30rpx;
 	width: 486.4rpx;
 	border-bottom: 1px solid #AAAAAA;
 	margin-left: 10rpx;
@@ -161,7 +160,7 @@
 }
 
 .count-down-start-time,.count-down-end-time  {
-	font-size: 15px;
+	font-size: 30rpx;
 	height: 50rpx;
 	width: 495rpx;
 	border-bottom: 1px solid #AAAAAA;
@@ -174,13 +173,15 @@
 
 
 .note-content {
-	font-size: 15px;
+	font-size: 30rpx;
 	width: 540rpx;
+	height: 25vh;
 }
 
 .count-down-start-text ,.count-down-end-text,.note-text{
-	font-size: 15px;
+	font-size: 30rpx;
 	height: 50rpx;
+	white-space: nowrap;
 }
 
 .img-count-down-start,.img-count-down-end ,.img-note{
@@ -188,11 +189,11 @@
 	height: 10rpx;
 }
 
-.event,
+.title,
 .time,
-.neirong,
-.start,
-.end,
+.content,
+.count-down-start,
+.count-down-end,
 .note {
 	margin-right: 30rpx;
 }
@@ -249,7 +250,7 @@
 }
 
 .line{
-	width: 2rpx;
+	width: 1px;
 	height: 108rpx;
 	background-color: #d81e06;
 }
