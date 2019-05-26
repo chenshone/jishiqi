@@ -173,11 +173,10 @@ page {
 	border: 2px solid #2AB9E2;
 	width: 240rpx;
 	height: 50rpx;
+  line-height: 50rpx;
 	border-radius: 10px;
 	text-align: center;
-	align-items: center;
 	margin-left: 30%;
-	padding-bottom: 6rpx;
 }
 
 .complete {
