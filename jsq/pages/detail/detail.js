@@ -203,26 +203,25 @@ Page({
 						title: '删除成功',
 						icon: 'success',
 						mask: true,
+						duration:500
 					});
-					setTimeout(self.fun(), 1500);
+					//更新缓存并跳转
+					setTimeout(function(){
+						self.dbPost.updateDel();
+						if (self.dbPost.getAllPostDataLen() == 0) {
+							wx.reLaunch({
+								url: '../new/new'
+							})
+						} else {
+							wx.reLaunch({
+								url: '../list/list'
+							})
+						}
+						},500);
+					
 				}
 			}
 		})
-	},
-
-	//更新缓存并跳转
-	fun: function() {
-		const self = this;
-		self.dbPost.updateDel();
-		if (self.dbPost.getAllPostDataLen() == 0) {
-			wx.reLaunch({
-				url: '../new/new'
-			})
-		} else {
-			wx.reLaunch({
-				url: '../list/list'
-			})
-		}
 	},
 
 	//确认事件
