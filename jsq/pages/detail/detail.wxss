@@ -212,8 +212,8 @@
 .footer-view{
 	display: flex;
 	flex-flow: row-reverse;
-	margin-right: 100rpx;
 	justify-content: space-between;
+  padding: 0 50rpx 0 50rpx;
 }
 
 .btn-del,.btn-ok,.box{

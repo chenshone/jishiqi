@@ -70,8 +70,8 @@
 		</view>
 		<textarea class="note-content {{system?'ios':'abc'}}" maxlength="-1" bindinput="finishedTxt" value="{{itemDetail.finishedTxt}}" />
 		</view>
-
-	<view class="footer">
+</view>
+<view class="footer">
 		<view wx:if="{{!itemDetail.finished}}" class="footer-view">
 			<view class="btn-del" catchtap="del">
 				<view class="box-del">
@@ -98,4 +98,3 @@
 			</view>
 		</view>
 	</view>
-</view>
