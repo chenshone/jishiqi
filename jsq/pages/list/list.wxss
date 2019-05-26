@@ -13,7 +13,7 @@ page{
 .date-box {
 	display: flex;
 	flex-direction: column;
-	width: 208rpx;
+	width: 188rpx;
 	height: 110rpx;
 	background-color: rgba(164, 162, 162, 0.4);
 	padding: 0.3125rem;

@@ -1,7 +1,7 @@
 <import src="list-item/list-item-tpl.wxml" />
 <view class="container">
 	<view class="date-box">
-		<text class="mouthDay">{{dateList[idx].month}}月 {{dateList[idx].day}}日</text>
+		<text class="mouthDay">{{dateList[idx].month}}月{{dateList[idx].day}}日</text>
 		<view class="year-week-box">
 			<text class="year">{{dateList[idx].year}}</text>
 			<text class="week">{{dateList[idx].week}}</text>

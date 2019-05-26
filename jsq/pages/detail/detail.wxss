@@ -41,8 +41,7 @@
 .time-icon {
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
-	margin-left: 130rpx;
+	margin-left: 120rpx;
 	margin-top: 20rpx;
 	width: 60rpx;
 }
@@ -113,13 +112,11 @@
 .time-start {
 	font-size: 30rpx;
 	height: 50rpx;
-	margin-left: 10rpx;
 }
 
 .time-end {
 	padding-top: 14rpx;
 	font-size: 30rpx;
-	margin-left: 10rpx;
 	height: 50rpx;
 	border-bottom: 1px solid #AAAAAA;
 }
