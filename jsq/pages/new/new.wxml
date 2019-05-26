@@ -52,7 +52,7 @@
 			<image class="img" src="../../images/new/group5.png"></image>
 			<view class="content-view">
 				<text class="title">事项内容</text>
-				<textarea class="thingsxiang" bindinput="thingContent" maxlength="-1"/>
+				<textarea class="thingsxiang" bindinput="thingContent" maxlength="60"/>
 			</view>
 		</view>
 		<view class="tpl-view">

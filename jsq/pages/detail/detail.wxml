@@ -68,7 +68,7 @@
 			<text class="note-text">完成备注:</text>
 			<image class="img-note" src="../../images/detail/49.png"></image>
 		</view>
-		<textarea class="note-content" maxlength="-1" bindinput="finishedTxt" value="{{itemDetail.finishedTxt}}" />
+		<textarea class="note-content {{system?'ios':'abc'}}" maxlength="-1" bindinput="finishedTxt" value="{{itemDetail.finishedTxt}}" />
 		</view>
 
 	<view class="footer">

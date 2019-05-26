@@ -20,15 +20,14 @@ page {
 	align-items: center;
 	margin-left: 56rpx;
 	margin-top:140rpx;
-	width: 208rpx;
 	height: 110rpx;
 	background-color: rgba(255, 255, 255, 0.4);
 	border-radius: 10px;
-	padding: 0.3125rem;
+	padding: 0.3125rem 0.7125rem 0.3125rem 0.7125rem;
+	color: #FFFFFF;
 }
 
 .date1 {
-	color: #FFFFFF;
 	font-size: 43rpx;
 	margin-left: 1px;
 	font-weight:bold;
@@ -37,10 +36,9 @@ page {
 .date2 {
 	display: flex;
 	justify-content: space-between;
-	color: #FFFFFF;
 	margin-top: 8rpx;
 	font-size: 30rpx;
-	width: 186rpx;
+	width: 100%;
 }
 
 .thing {

@@ -4,7 +4,8 @@ import {
 Page({
 	data: {
 		ready: false,
-		end: false
+		end: false,
+		system: false
 	},
 	onLoad: function(options) {
 		var dateId = options.dateId,
@@ -18,6 +19,18 @@ Page({
 			day: itemList.day,
 			itemId: itemId
 		});
+		let phone = wx.getSystemInfoSync(); //调用方法获取机型  
+		if (phone.platform == 'ios') {
+			this.setData({
+				system: true,
+			});
+		} else if (phone.platform == 'android') {
+			this.setData({
+				system: false
+			});
+		}
+
+
 	},
 
 	onShow: function() {
@@ -33,7 +46,6 @@ Page({
 			endTime: endTime
 		});
 		if (!this.data.itemDetail.finished) {
-			console.log('sss',this.data.itemDetail.finished)
 			this.countDownStart();
 			this.countDownEnd();
 		}
@@ -75,7 +87,6 @@ Page({
 
 	// 开始倒计时
 	countDownStart: function() {
-		console.log(this.data.itemDetail.finished)
 		let that = this;
 		let nowTime = new Date().getTime(); //现在时间（时间戳）
 		let startTime = new Date(that.data.startTime).getTime(); //开始时间（时间戳）
@@ -109,7 +120,6 @@ Page({
 
 	// 结束倒计时
 	countDownEnd: function() {
-		console.log(this.data.itemDetail.finished)
 		let that = this;
 		let nowTime = new Date().getTime(); //现在时间（时间戳）
 		let endTime = new Date(that.data.endTime).getTime(); //结束时间（时间戳）
@@ -147,7 +157,7 @@ Page({
 	timeFormin(param) {
 		return param < 0 ? 0 : param;
 	},
-	
+
 	//本次事件是否完成
 	isFinished: function() {
 		const self = this;
@@ -170,7 +180,7 @@ Page({
 		} else {
 			this.setData({
 				['itemDetail.finished']: true
-			})
+			});
 		}
 	},
 
@@ -180,7 +190,7 @@ Page({
 			['itemDetail.finishedTxt']: e.detail.value
 		});
 	},
-	
+
 	//删除事件
 	del: function() {
 		const self = this;
@@ -199,7 +209,7 @@ Page({
 			}
 		})
 	},
-	
+
 	//更新缓存并跳转
 	fun: function() {
 		const self = this;
@@ -214,7 +224,7 @@ Page({
 			})
 		}
 	},
-	
+
 	//确认事件
 	ok: function() {
 		const self = this;

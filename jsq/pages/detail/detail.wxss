@@ -1,5 +1,5 @@
 .container {
-	margin: 40rpx 50rpx 0 50rpx;
+	padding: 40rpx 50rpx 0 50rpx;
 }
 
 .title-text-view {
@@ -133,6 +133,7 @@
 
 .content-text {
 	font-size: 30rpx;
+	height: 50rpx;
 	color: #000000;
 	display: flex;
 	justify-content: space-between;
@@ -146,6 +147,7 @@
 .content-detail {
 	font-size: 30rpx;
 	width: 486.4rpx;
+	min-height: 50rpx;
 	border-bottom: 1px solid #AAAAAA;
 	margin-left: 10rpx;
 	word-break: break-all;
@@ -172,7 +174,12 @@
 .note-content {
 	font-size: 30rpx;
 	width: 540rpx;
-	height: 25vh;
+	height: 15vh;
+}
+
+.ios{
+	margin-left: -10rpx;
+	margin-top: -10rpx;
 }
 
 .count-down-start-text ,.count-down-end-text,.note-text{
@@ -257,6 +264,7 @@
 	flex-flow: row-reverse;
 	width: 330rpx;
 	justify-content: space-between;
+	padding-left: 50rpx;
 }
 
 .box-center{
