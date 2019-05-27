@@ -34,13 +34,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "999",
 					"pathName": "pages/new/new",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "11",
+					"pathName": "pages/list/list",
 					"scene": null
 				}
 			]

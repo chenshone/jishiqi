@@ -201,16 +201,17 @@ movable-view {
 	justify-content: space-between;
 	height: 26rpx;
 	border: 0;
-	border-bottom: 6rpx solid rgba(255, 255, 255, 1);
+	border-bottom: 4rpx solid #EFA86A;
 	width: 332rpx;
 	top: 10rpx;
+	margin-top: -4rpx;
 }
 
 .dataPoint {
-	height: auto;
+	height: 26rpx;
 	width: 4rpx;
 	border: 0;
-	background-color: rgba(255, 255, 255, 1);
+	background-color: #EFA86A;
 }
 
 .level-1 {

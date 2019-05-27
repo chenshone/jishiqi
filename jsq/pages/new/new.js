@@ -28,6 +28,7 @@ Page({
 		let date = util.getDates(time); //过去年份日期星期
 		let dateArr = [];
 		dateArr = date[0].time.split("-"); //分割字符串
+		let weekNum = util.weekNum(dateArr[0],dateArr[1],dateArr[2])
 		this.setData({
 			['things.startTime']: nowTime,
 			['things.chooseStartTime']: nowTime,
@@ -36,7 +37,8 @@ Page({
 			year: dateArr[0],
 			month: dateArr[1],
 			day: dateArr[2],
-			week: date[0].week
+			week: date[0].week,
+			weekNum:weekNum
 		});
 	},
 
