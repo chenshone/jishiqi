@@ -24,7 +24,7 @@
 		</view>
 		<view class="tpl-view">
 			<image class="img" src="../../images/new/rili.svg"></image>
-			<picker mode="time" value="{{things.chooseStartTime}}" start="{{things.startTime}}" end="23:59" bindchange="bindStartTime">
+			<picker mode="time" value="{{things.chooseStartTime}}" end="23:59" bindchange="bindStartTime">
 				<view class="start-time {{isChoose?'choose':'unchoose'}}">
 					<view class="time-content">
 						<text class="text">起 始:</text>
