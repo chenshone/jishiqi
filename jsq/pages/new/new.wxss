@@ -15,8 +15,6 @@ page {
 }
 
 .Date {
-	display: flex;
-	flex-flow: column;
 	align-items: center;
 	margin-left: 56rpx;
 	margin-top:140rpx;
@@ -36,7 +34,7 @@ page {
 .date2 {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 8rpx;
+	padding-top: 8rpx;
 	font-size: 30rpx;
 	width: 100%;
 }
@@ -111,6 +109,9 @@ page {
 
 .time-content{
 	padding-top: 8rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: -4rpx;
 }
 
 .text,.choose-start-time,.choose-end-time {
