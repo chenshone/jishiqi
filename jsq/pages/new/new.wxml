@@ -17,21 +17,22 @@
 <view class="list">
 	<view class="container">
 		<view class="tpl-view">
-			<image class="img" src="../../images/new/mulu.png"></image>
+			<image class="img" src="../../images/new/mulu.svg"></image>
 			<view class="event-title">
 				<input class="input-event-title" bindinput="thingTitle" placeholder="事项主题" maxlength="14" placeholder-style="color:#AAAAAA" />
 			</view>
 		</view>
 		<view class="tpl-view">
-			<image class="img" src="../../images/new/rili.png"></image>
-			<picker mode="time" value="{{things.chooseStartTime}}" start="{{startTime}}" end="23:59" bindchange="bindStartTime">
+			<image class="img" src="../../images/new/rili.svg"></image>
+			<picker mode="time" value="{{things.chooseStartTime}}" start="{{things.startTime}}" end="23:59" bindchange="bindStartTime">
 				<view class="start-time {{isChoose?'choose':'unchoose'}}">
 					<view class="time-content">
 						<text class="text">起 始:</text>
 					</view>
 					<view class="time-content">
 						<text class="choose-start-time">{{things.chooseStartTime}}</text>
-						<image class="icon" src="../../images/new/xia.png"></image>
+						<image wx:if="{{isChoose}}" class="icon" src="../../images/new/xia1.svg"></image>
+						<image wx:else class="icon" src="../../images/new/xia.svg"></image>
 					</view>
 				</view>
 			</picker>
@@ -43,20 +44,21 @@
 					</view>
 					<view class="time-content">
 						<text class="choose-end-time">{{things.chooseEndTime}}</text>
-						<image class="icon" src="../../images/new/xia.png"></image>
+						<image wx:if="{{isChoose}}" class="icon" src="../../images/new/xia1.svg"></image>
+						<image wx:else class="icon" src="../../images/new/xia.svg"></image>
 					</view>
 				</view>
 			</picker>
 		</view>
 		<view class="tpl-view">
-			<image class="img" src="../../images/new/group5.png"></image>
+			<image class="img" src="../../images/new/group5.svg"></image>
 			<view class="content-view">
 				<text class="title">事项内容</text>
 				<textarea class="thingsxiang" bindinput="thingContent" maxlength="60"/>
 			</view>
 		</view>
 		<view class="tpl-view">
-			<image class="img" src="../../images/new/group1.png"></image>
+			<image class="img" src="../../images/new/group1.svg"></image>
 			<view class="importance">
 				<text class="title">重要程度</text>
 				<view class="choose-importance">

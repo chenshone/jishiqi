@@ -5,8 +5,7 @@ Page({
 	data: {
 		CX: 0,
 		unit: 0,
-		disabled:true,
-		localEnd:0
+		disabled:true
 	},
 
 	onLoad: function(options) {
@@ -58,15 +57,13 @@ Page({
 	//完成动作时更新最新flag
  	changeEnd:function(event){
 		this.setData({
-			idxEnd:this.data.idx,
-			localEnd:this.data.unit*(this.data.len - this.data.idx - 1)
+			idxEnd:this.data.idx
 		})
  	},
 	//特殊情况
 	changeCanel:function(event){
 		this.setData({
-			idxEnd:this.data.idx,
-			localEnd:this.data.unit*(this.data.len - this.data.idx - 1)
+			idxEnd:this.data.idx
 		})
 	},
 	

@@ -95,16 +95,16 @@ page {
 
 .todoNum {
 	display: flex;
-	width: 26px;
-	height: auto;
+	width: auto;
 	font-family: Segoe UI;
-	font-size: 20px;
+	font-size: 40rpx;
 	font-weight: normal;
 	font-stretch: normal;
-	line-height: 27px;
+	line-height: 54rpx;
 	letter-spacing: 0px;
 	align-items: center;
 	justify-content: center;
+	white-space: nowrap;
 }
 
 .todoDetails {
@@ -123,14 +123,12 @@ page {
 
 .todoDetails-word {
 	margin-right: 40rpx;
+}
+
+.todoDetails-word,.todoDetails-num {
 	display: flex;
 	flex-direction: column;
 	text-align: right;
-}
-
-.todoDetails-num {
-	display: flex;
-	flex-direction: column;
 }
 
 .content {
@@ -199,18 +197,22 @@ movable-view {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
-	height: 26rpx;
+	height: 30rpx;
 	border: 0;
-	border-bottom: 4rpx solid #EFA86A;
+	border-bottom: 4rpx solid #ffffff;
 	width: 332rpx;
-	top: 10rpx;
-	margin-top: -4rpx;
+	padding-top:6rpx;
 }
 
-.dataPoint {
+.datePoint {
+	margin-top: 4rpx;
 	height: 26rpx;
 	width: 4rpx;
 	border: 0;
+	background-color: #ffffff;
+}
+
+.now-choose{
 	background-color: #EFA86A;
 }
 

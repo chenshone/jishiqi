@@ -186,15 +186,15 @@ page {
 }
 
 .touch1{
-	background-color: #fb0000;
+	background-color: #ff3434;
 }
 
 .touch2{
-	background-color: #fabc35;
+	background-color: #f9c85c;
 }
 
 .touch3{
-	background-color: #00F5FF;
+	background-color: #44cef6;
 }
 
 .touch4{

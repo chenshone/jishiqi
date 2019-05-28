@@ -73,8 +73,9 @@
 }
 
 .new-notes-header-circle {
-	border: 0;
+	border: 4rpx solid hsla(0, 0%, 100%, 0);
 	background-color: #ffffff;
+	background-clip: padding-box;
 	border-radius: 50%;
 	width: 30rpx;
 	height: 30rpx;
@@ -170,7 +171,7 @@
 .new-notes-footer-start,
 .new-notes-footer-end {
 	display: flex;
-  font-size: 22rpx;
+	font-size: 22rpx;
 }
 
 
@@ -181,23 +182,27 @@
 
 .isfinished {
 	background-image: linear-gradient(0deg,
-		#909394 0%,
-		#DBDBDB 100%);
+		#DBDBDB 0%,
+		#909394 100%);
 }
 
 
-.isfinished-circle-1{
+.isfinished-circle-1 {
 	border: 4rpx solid #ff3434;
+	background-clip: border-box;
 }
 
-.isfinished-circle-2{
+.isfinished-circle-2 {
 	border: 4rpx solid #f9c85c;
+	background-clip: border-box;
 }
 
-.isfinished-circle-3{
+.isfinished-circle-3 {
 	border: 4rpx solid #44cef6;
+	background-clip: border-box;
 }
 
-.isfinished-circle-4{
+.isfinished-circle-4 {
 	border: 4rpx solid #00bc12;
+	background-clip: border-box;
 }
