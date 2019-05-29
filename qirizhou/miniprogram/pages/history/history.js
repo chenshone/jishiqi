@@ -2,7 +2,7 @@ const app = getApp()
 Page({
 
 	data: {
-		avatarUrl: '../../images/index/middle7.svg',
+    avatarUrl: '../../images/index/user-unlogin.png',
 		nickName: "CHENSHONE"
 	},
 

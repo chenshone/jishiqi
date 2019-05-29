@@ -61,7 +61,7 @@
 .main-work-time-righttime-left {
   font-size: 26rpx;
   color: white;
-  margin-left: 90rpx;
+  margin-left: 150rpx;
 }
 
 .line {

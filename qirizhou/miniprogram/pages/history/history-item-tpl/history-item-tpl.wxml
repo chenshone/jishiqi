@@ -1,19 +1,19 @@
 <template name="tips">
-	<view class="main-work {{level==1? 'style1':(level ==  2?'style2':(level == 3?'style3':(level == 4?'style4':'')))}}">
-		<text class='main-work-name'>{{title}}</text>
-		<view class='main-work-time'>
-			<text class='main-work-time-lefttime'>{{year}}年{{month}}月{{day}}日 {{week}}</text>
-			<text class='main-work-time-righttime-left'>{{startTime}}</text>
-			<view class='line'></view>
-			<text class='main-work-time-righttime-right'>{{endTime}}</text>
-		</view>
-		<view class='main-work-inside'>
-			<text class='main-work-inside-tittle'>内容是：</text>
-			<text class='main-work-inside-option'>{{content}}</text>
-		</view>
-		<view class='main-work-other' wx:if="{{finished}}">
-			<text class='main-work-other-tittle'>备注是：</text>
-			<text class='main-work-other-option'>{{finishedTxt}}</text>
-		</view>
-	</view>
+  <view class="main-work {{level==1? 'style1':(level ==  2?'style2':(level == 3?'style3':(level == 4?'style4':'')))}}">
+    <text class='main-work-name'>{{title}}</text>
+    <view class='main-work-time'>
+        <text class='main-work-time-lefttime'>{{year}}年{{month}}月{{day}}日 {{week}}</text>
+        <text class='main-work-time-righttime-left'>{{startTime}}</text>
+        <view class='line'></view>
+        <text class='main-work-time-righttime-right'>{{endTime}}</text>
+    </view>
+    <view class='main-work-inside'>
+      <text class='main-work-inside-tittle'>内容是：</text>
+      <text class='main-work-inside-option'>{{content}}</text>
+    </view>
+    <view class='main-work-other' wx:if="{{finished}}">
+      <text class='main-work-other-tittle'>备注是：</text>
+      <text class='main-work-other-option'>{{finishedTxt}}</text>
+    </view>
+  </view>
 </template>
