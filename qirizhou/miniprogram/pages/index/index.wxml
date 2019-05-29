@@ -1,22 +1,19 @@
-	<view class="main-pic">
-		<button 
-		  open-type="getUserInfo" 
-		  bindgetuserinfo="onGetUserInfo"
-		  class="userinfo-avatar"
-		  style="background-image: url({{avatarUrl}}); background-size:100% 100%;"
-		></button>
-	</view>
-	<view class='middle-upword'>
-	  <view class='middle-upword-word'>
-	    <text wx:if="{{logged}}"class='middle-upword-word-option'>欢迎你</text>
-			<text wx:if="{{!logged}}"class='middle-upword-word-option'>点击上方头像登录</text>
-	  </view>
-	</view>
-	<view class='middle-downword'>
-	  <view class='middle-downword-word'>
-	    <text class='middle-downword-word-option'>进入你的七日轴</text>
-	  </view>
-	</view>
-	<view class="main-enter">
-	  <image src='../../images/index/dleft.png' class='main-enter-option' catchtap="goin"></image>
-	</view>
+<view class="main-pic">
+  <image src='{{avatarUrl}}' class='userinfo-avatar' catchtap="goin"></image>
+</view>
+
+<view class='middle-upword'>
+  <view class='middle-upword-word'>
+    <text wx:if="{{logged}}" class='middle-upword-word-option'>点击下方按钮</text>
+    <text wx:if="{{!logged}}" class='middle-upword-word-option'>点击下方按钮登录</text>
+  </view>
+</view>
+<view class='middle-downword'>
+  <view class='middle-downword-word'>
+    <text class='middle-downword-word-option'>进入你的七日轴</text>
+  </view>
+</view>
+
+<view class='main-enter'>
+  <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfoOrGoin" class="main-enter-option" style="background-image: url('https://7765-week-note-mlxgbfl-1259336605.tcb.qcloud.la/%E5%8F%B3%E7%AE%AD%E5%A4%B4.svg?sign=5cee3929f31e3c0db19d23dc1f0e9e48&t=1559153511'); background-size:100% 100%;"></button>
+</view>

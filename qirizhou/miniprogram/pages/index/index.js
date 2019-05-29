@@ -3,7 +3,7 @@ const app = getApp()
 
 Page({
 	data: {
-    avatarUrl: 'https://7765-week-note-mlxgbfl-1259336605.tcb.qcloud.la/user-unlogin.png?sign=27c12350cd89adc4f4f6eb1a9625ef14&t=1559151189',
+    avatarUrl: '../../images/index/middle7.svg',
 		userInfo: {},
 		logged: false,
 		takeSession: false,
@@ -41,7 +41,7 @@ Page({
 	},
 
 	//获取用户信息
-	onGetUserInfo: function(e) {
+	onGetUserInfoOrGoin: function(e) {
 		if (!this.logged && e.detail.userInfo) {
 			this.setData({
 				logged: true,
@@ -58,28 +58,24 @@ Page({
 				}
 			})
 		}
-	},
-
-	//进入主程序
-	goin: function() {
-		if (this.data.logged) {
-			var isFirst = wx.getStorageSync('dateList');
-			if (isFirst.length > 0) {
-				wx.reLaunch({
-					url: '/pages/list/list'
-				})
-			} else {
-				wx.reLaunch({
-					url: '/pages/new/new'
-				})
-			}
-		} else {
-			wx.showToast({
-				title: '您尚未登录，请先登录',
-				icon:'none',
-				mask: true
-			});
-		}
+    //登录后进入主程序
+    if (this.data.logged) {
+      var isFirst = wx.getStorageSync('dateList');
+      if (isFirst.length > 0) {
+        wx.reLaunch({
+          url: '/pages/list/list'
+        })
+      } else {
+        wx.reLaunch({
+          url: '/pages/new/new'
+        })
+      }
+    } else {
+      wx.showToast({
+        title: '您尚未登录，请先登录',
+        icon: 'none',
+        mask: true
+      });
+    }
 	}
-
 })

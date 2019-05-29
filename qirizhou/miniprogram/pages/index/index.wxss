@@ -42,6 +42,8 @@ page {
   margin-top: 76rpx;
 }
 .main-enter-option {
-  width: 84rpx;
-  height: 84rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-size: 100% 100%;
 }
