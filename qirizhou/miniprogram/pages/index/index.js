@@ -3,7 +3,7 @@ const app = getApp()
 
 Page({
 	data: {
-		avatarUrl: '../../images/index/user-unlogin.png',
+    avatarUrl: 'https://7765-week-note-mlxgbfl-1259336605.tcb.qcloud.la/user-unlogin.png?sign=27c12350cd89adc4f4f6eb1a9625ef14&t=1559151189',
 		userInfo: {},
 		logged: false,
 		takeSession: false,

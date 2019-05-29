@@ -3,7 +3,7 @@
 		  open-type="getUserInfo" 
 		  bindgetuserinfo="onGetUserInfo"
 		  class="userinfo-avatar"
-		  style="background-image: url({{avatarUrl}})"
+		  style="background-image: url({{avatarUrl}}); background-size:100% 100%;"
 		></button>
 	</view>
 	<view class='middle-upword'>
