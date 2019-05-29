@@ -161,7 +161,9 @@ page {
 
 .footer {
 	width: 100%;
-	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	position: absolute;
 	bottom: 1%;
 	margin-left: -38rpx;
@@ -173,6 +175,19 @@ page {
 	padding-right: 6rpx;
 }
 
+.block,.history{
+	width: 210rpx;
+	height: 70rpx;
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	
+}
+
+.img-history{
+	width: 50rpx;
+	height: 50rpx;
+}
 .tips,
 .to-word {
 	font-weight: bold;
@@ -229,3 +244,5 @@ movable-view {
 .level-4 {
 	color: #00bc12;
 }
+
+

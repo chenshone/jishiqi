@@ -70,6 +70,11 @@
 	</scroll-view>
 
 	<view class="footer">
+		<view class="block"></view>
 		<image class="button-new" catchtap="jumpNew" src="../../images/list/input.svg"></image>
+		<view class="history" catchtap="history">
+			<image class="img-history" src="../../images/list/history.png"></image>
+			历史记录
+		</view>
 	</view>
 </view>

@@ -1,5 +1,6 @@
-//index.js
+
 //获取应用实例
+const app = getApp()
 import {
 	DBPost
 } from '../../db/DBPost.js';
@@ -15,6 +16,7 @@ Page({
 			title: "",
 			content: "",
 			level: 0,
+			finished:false,
 			finishedTxt: ""
 		}
 	},
@@ -169,7 +171,10 @@ Page({
 
 	//完成按钮
 	onTapJump: function() {
+		wx.cloud.init();
+		const self = this;
 		var dbPost = new DBPost();
+		const db = wx.cloud.database()
 		const things = this.data.things;
 		this.setData({
 			['things.finished']: false
@@ -182,6 +187,22 @@ Page({
 				mask: true
 			})
 		} else {
+			 db.collection('dateList').add({
+			  data: {
+				  day: self.data.day,
+				  month: self.data.month,
+				  year: self.data.year,
+				  week: self.data.week,
+				  weekNum: self.data.weekNum,
+				  startTime:self.data.things.chooseStartTime,
+				  endTime:self.data.things.chooseEndTime,
+				  content:self.data.things.content,
+				  finished:self.data.things.finished,
+				  finishedTxt:self.data.things.finishedTxt,
+				  level:self.data.things.level,
+				  title:self.data.things.title
+			  }
+			})
 			dbPost.updateDateList(this.data);
 		}
 	},

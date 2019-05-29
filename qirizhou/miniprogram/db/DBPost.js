@@ -179,31 +179,6 @@ class DBPost {
 		dateItem.things[this.itemId].finishedTxt = finishedTxt;
 		this.updateStorageSnyc(self.keyDateList, list, self);
 	}
-
-	// //是否超过7天
-	// else if (listLen == 7) {
-	// 	wx.showModal({
-	// 		title: '提示',
-	// 		content: '您的计划数已达7天了哦,是否清空并开始新的7天呢？', //建议重想文案
-	// 		success(res) {
-	// 			if (res.confirm) {
-	// 				list = [];
-	// 				list.push({
-	// 					month: data.month,
-	// 					day: data.day,
-	// 					year: data.year,
-	// 					week: data.week,
-	// 					things: [data.things]
-	// 				});
-	// 				//更新缓存
-	// 				self.updateStorageSnyc(self.keyDateList, list, self);
-	// 				wx.reLaunch({
-	// 					url: '/pages/list/list'
-	// 				})
-	// 			}
-	// 		}
-	// 	})
-	// } 
 };
 
 export {

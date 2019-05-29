@@ -1,0 +1,127 @@
+.main-work {
+  width: 678rpx;
+  padding-bottom: 30rpx;
+  border-radius: 19px;
+  border: solid 2px #fff;
+  margin-left: 36rpx;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30rpx;
+}
+
+.style1 {
+	background-image: linear-gradient(0deg,
+		#ffa710 0%,
+		#ff3300 100%);
+	 box-shadow: 0px 3px 6px 0px rgba(255, 136, 0, 0.5);
+}
+
+.style2 {
+	background-image: linear-gradient(0deg,
+		#fee506 0%,
+		#ff9900 100%);
+	 box-shadow: 0px 3px 6px 0px rgba(255, 255, 0, 0.5);
+}
+
+.style3 {
+	background-image: linear-gradient(0deg,
+		#10ffb6 0%,
+		#00b9ff 100%);
+	 box-shadow: 0px 3px 6px 0px rgba(0, 177, 255, 0.5);
+}
+
+.style4 {
+	background-image: linear-gradient(0deg,
+		#00ff4c 0%,
+		#228772 100%);
+	box-shadow: 0px 3px 6px 0px rgba(55, 204, 50, 0.5);
+}
+
+.main-work-name {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: white;
+}
+
+.main-work-time {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 26rpx;
+}
+
+.main-work-time-lefttime {
+  font-size: 26rpx;
+  color: white;
+  margin-left: 26rpx;
+}
+
+.main-work-time-righttime-left {
+  font-size: 26rpx;
+  color: white;
+  margin-left: 90rpx;
+}
+
+.line {
+  width: 44rpx;
+  height: 4rpx;
+  background-color: #ffffff;
+  margin-top: 15rpx;
+  margin-left: 16rpx;
+}
+
+.main-work-time-righttime-right {
+  font-size: 26rpx;
+  color: white;
+  margin-left: 16rpx;
+}
+
+.main-work-inside {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 26rpx;
+  width: 616rpx;
+}
+
+.main-work-inside-tittle {
+  display: flex;
+  font-size: 30rpx;
+  color: white;
+  margin-left: 26rpx;
+}
+
+.main-work-inside-option {
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  color: white;
+  margin-left: 56rpx;
+	word-break: break-all;
+}
+
+.main-work-other {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 26rpx;
+  width: 616rpx;
+}
+
+.main-work-other-tittle {
+  display: flex;
+  font-size: 30rpx;
+  color: white;
+  margin-left: 26rpx;
+}
+
+.main-work-other-option {
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  color: white;
+  margin-left: 56rpx;
+	word-break: break-all;
+}

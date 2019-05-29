@@ -1,0 +1,22 @@
+	<view class="main-pic">
+		<button 
+		  open-type="getUserInfo" 
+		  bindgetuserinfo="onGetUserInfo"
+		  class="userinfo-avatar"
+		  style="background-image: url({{avatarUrl}})"
+		></button>
+	</view>
+	<view class='middle-upword'>
+	  <view class='middle-upword-word'>
+	    <text wx:if="{{logged}}"class='middle-upword-word-option'>欢迎你</text>
+			<text wx:if="{{!logged}}"class='middle-upword-word-option'>点击上方头像登录</text>
+	  </view>
+	</view>
+	<view class='middle-downword'>
+	  <view class='middle-downword-word'>
+	    <text class='middle-downword-word-option'>进入你的七日轴</text>
+	  </view>
+	</view>
+	<view class="main-enter">
+	  <image src='../../images/index/dleft.png' class='main-enter-option' catchtap="goin"></image>
+	</view>

@@ -18,6 +18,7 @@ Page({
 			idx:dbPost.getAllPostDataLen() - 1,
 			idxEnd:dbPost.getAllPostDataLen() - 1
 		})
+		console.log(this.data)
 	},
 
 	onReady: function() {
@@ -80,6 +81,13 @@ Page({
 		let itemId = event.currentTarget.dataset.itemId;
 		wx.navigateTo({
 			url:'../detail/detail?dateId='+dateId+'&itemId='+itemId,
+		})
+	},
+	
+	//进入历史记录页
+	history:function(){
+		wx.navigateTo({
+			url:'../history/history'
 		})
 	}
 	

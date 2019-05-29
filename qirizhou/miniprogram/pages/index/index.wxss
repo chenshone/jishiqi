@@ -1,0 +1,47 @@
+/* pages/w/w.wxss */
+page {
+  background: linear-gradient(160deg, #378fe6, #9deebd);
+}
+
+.main-pic {
+  display: flex;
+  justify-content: center;
+  margin-top: 200rpx;
+}
+
+.userinfo-avatar {
+  width: 296rpx;
+  height: 296rpx;
+	border-radius: 50%;
+}
+
+.middle-upword {
+  display: flex;
+  justify-content: center;
+  margin-top: 138rpx;
+}
+
+.middle-upword-word,.middle-downword-word {
+	color: #fff;
+	font-size: 60rpx;
+	letter-spacing: 24rpx;
+	padding-left: 24rpx;
+}
+
+.middle-downword {
+  margin-top: 76rpx;
+}
+
+.middle-downword-word {
+  display: flex;
+	justify-content: center;
+}
+.main-enter{
+  display: flex;
+  justify-content: center;
+  margin-top: 76rpx;
+}
+.main-enter-option {
+  width: 84rpx;
+  height: 84rpx;
+}

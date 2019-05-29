@@ -29,8 +29,6 @@ Page({
 				system: false
 			});
 		}
-
-
 	},
 
 	onShow: function() {
@@ -160,7 +158,9 @@ Page({
 
 	//本次事件是否完成
 	isFinished: function() {
+		wx.cloud.init();
 		const self = this;
+		const db = wx.cloud.database()
 		//当计划还未结束时，提前完成的情况
 		if (!this.data.end) {
 			wx.showModal({
@@ -174,12 +174,32 @@ Page({
 							end: true,
 							ready: false
 						})
+						db.collection('dateList').doc(self.data.counterId).update({
+							data: {
+								finished: true
+							},
+							success: res => {
+								this.setData({
+									finished: true
+								})
+							}
+						});
 					}
 				}
 			})
 		} else {
 			this.setData({
 				['itemDetail.finished']: true
+			});
+			db.collection('dateList').doc(this.data.counterId).update({
+				data: {
+					finished: true
+				},
+				success: res => {
+					this.setData({
+						finished: true
+					})
+				}
 			});
 		}
 	},
@@ -203,10 +223,10 @@ Page({
 						title: '删除成功',
 						icon: 'success',
 						mask: true,
-						duration:500
+						duration: 500
 					});
 					//更新缓存并跳转
-					setTimeout(function(){
+					setTimeout(function() {
 						self.dbPost.updateDel();
 						if (self.dbPost.getAllPostDataLen() == 0) {
 							wx.reLaunch({
@@ -217,7 +237,7 @@ Page({
 								url: '../list/list'
 							})
 						}
-						},500);
+					}, 500);
 				}
 			}
 		})
@@ -225,11 +245,23 @@ Page({
 
 	//确认事件
 	ok: function() {
+		wx.cloud.init();
 		const self = this;
 		wx.showToast({
 			title: '保存成功',
 			icon: 'success',
 			mask: true
+		});
+		const db = wx.cloud.database()
+		db.collection('dateList').doc(this.data.counterId).update({
+			data: {
+				finishedTxt: self.data.itemDetail.finishedTxt
+			},
+			success: res => {
+				this.setData({
+					finishedTxt: self.data.itemDetail.finishedTxt
+				})
+			}
 		});
 		self.dbPost.updateOk(self.data.itemDetail.finished, self.data.itemDetail.finishedTxt);
 		wx.reLaunch({

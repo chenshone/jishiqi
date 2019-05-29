@@ -1,9 +1,11 @@
 {
 	"pages": [
-		"pages/w/w",
+    "pages/w/w",
+		"pages/index/index",
 		"pages/list/list",
 		"pages/new/new",
-		"pages/detail/detail"
+		"pages/detail/detail",
+    "pages/history/history"
 	],
 	"sitemapLocation": "sitemap.json",
 	"window": {
