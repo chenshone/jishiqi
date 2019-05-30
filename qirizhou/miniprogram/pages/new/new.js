@@ -17,7 +17,8 @@ Page({
 			content: "",
 			level: 0,
 			finished:false,
-			finishedTxt: ""
+			finishedTxt: "",
+			counterId:''
 		}
 	},
 
@@ -201,9 +202,17 @@ Page({
 				  finishedTxt:self.data.things.finishedTxt,
 				  level:self.data.things.level,
 				  title:self.data.things.title
-			  }
+			  }	,
+			  
+			   success: res => {
+			    // 在返回结果中会包含新创建的记录的 _id
+			    this.setData({
+			      ['things.counterId']: res._id
+			    })			
+				dbPost.updateDateList(this.data);
+				}
 			})
-			dbPost.updateDateList(this.data);
+			
 		}
 	},
 

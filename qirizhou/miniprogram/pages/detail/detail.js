@@ -17,7 +17,7 @@ Page({
 			year: itemList.year,
 			month: itemList.month,
 			day: itemList.day,
-			itemId: itemId
+			itemId: itemId,
 		});
 		let phone = wx.getSystemInfoSync(); //调用方法获取机型  
 		if (phone.platform == 'ios') {
@@ -174,7 +174,7 @@ Page({
 							end: true,
 							ready: false
 						})
-						db.collection('dateList').doc(self.data.counterId).update({
+						db.collection('dateList').doc(self.data.itemDetail.counterId).update({
 							data: {
 								finished: true
 							},
@@ -191,7 +191,7 @@ Page({
 			this.setData({
 				['itemDetail.finished']: true
 			});
-			db.collection('dateList').doc(this.data.counterId).update({
+			db.collection('dateList').doc(this.data.itemDetail.counterId).update({
 				data: {
 					finished: true
 				},
@@ -253,7 +253,7 @@ Page({
 			mask: true
 		});
 		const db = wx.cloud.database()
-		db.collection('dateList').doc(this.data.counterId).update({
+		db.collection('dateList').doc(this.data.itemDetail.counterId).update({
 			data: {
 				finishedTxt: self.data.itemDetail.finishedTxt
 			},
