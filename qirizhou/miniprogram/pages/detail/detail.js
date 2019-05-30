@@ -214,6 +214,7 @@ Page({
 	//删除事件
 	del: function() {
 		const self = this;
+		wx.cloud.init();
 		wx.showModal({
 			title: '提示',
 			content: '确认删除',
@@ -225,19 +226,24 @@ Page({
 						mask: true,
 						duration: 500
 					});
-					//更新缓存并跳转
-					setTimeout(function() {
-						self.dbPost.updateDel();
-						if (self.dbPost.getAllPostDataLen() == 0) {
-							wx.reLaunch({
-								url: '../new/new'
-							})
-						} else {
-							wx.reLaunch({
-								url: '../list/list'
-							})
+					const db = wx.cloud.database();
+					db.collection('dateList').doc(self.data.itemDetail.counterId).remove({
+						success: res => {
+							//更新缓存并跳转
+							setTimeout(function() {
+								self.dbPost.updateDel();
+								if (self.dbPost.getAllPostDataLen() == 0) {
+									wx.reLaunch({
+										url: '../new/new'
+									})
+								} else {
+									wx.reLaunch({
+										url: '../list/list'
+									})
+								}
+							}, 500);
 						}
-					}, 500);
+					});
 				}
 			}
 		})
