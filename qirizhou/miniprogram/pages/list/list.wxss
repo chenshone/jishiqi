@@ -1,7 +1,6 @@
 @import "list-item/list-item-tpl.wxss";
-
+@import "bg.wxss";
 page {
-  background-image: url('https://7765-week-note-mlxgbfl-1259336605.tcb.qcloud.la/bg.png?sign=ded834f52186dcf68e9c6cae8da35a74&t=1559151278');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -220,7 +219,7 @@ movable-view {
 .datePoint {
 	margin-top: 4rpx;
 	height: 26rpx;
-	width: 4rpx;
+	width: 6rpx;
 	border: 0;
 	background-color: #ffffff;
 }

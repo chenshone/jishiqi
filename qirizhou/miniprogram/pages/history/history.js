@@ -34,16 +34,11 @@ Page({
 		}).get({
 			success: res => {
 				this.setData({
-					list: res.data
+					list: res.data.reverse()
 				})
 			}
 		})
 
-	},
-
-
-	onShow: function() {
-		console.log(this.data)
 	},
 
 	goBack: function() {

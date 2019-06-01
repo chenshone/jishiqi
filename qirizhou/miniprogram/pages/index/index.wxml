@@ -15,5 +15,5 @@
 </view>
 
 <view class='main-enter'>
-  <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfoOrGoin" class="main-enter-option" style="background-image: url('https://7765-week-note-mlxgbfl-1259336605.tcb.qcloud.la/%E5%8F%B3%E7%AE%AD%E5%A4%B4.svg?sign=5cee3929f31e3c0db19d23dc1f0e9e48&t=1559153511'); background-size:100% 100%;"></button>
+  <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfoOrGoin" class="main-enter-option" style=""></button>
 </view>

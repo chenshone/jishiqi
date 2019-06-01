@@ -1,4 +1,4 @@
-/* pages/w/w.wxss */
+@import "btn-bg.wxss";
 page {
   background: linear-gradient(160deg, #378fe6, #9deebd);
 }
