@@ -1,8 +1,8 @@
 <import src="history-item-tpl/history-item-tpl.wxml" />
 <view class='header'>
 	<view class='header-backbotton'>
-		<image src='../../images/history/back.png' class='header-backbotton-option' catchtap="goBack"></image>
-		<text class='header-backbotton-tittle'>记录</text>
+		<image src='../../images/history/back.svg' class='header-backbotton-option' catchtap="goBack"></image>
+		<text class='header-backbotton-tittle'>历史记录</text>
 		<view class='empty'></view>
 	</view>
 	<view class='header-mainline'>

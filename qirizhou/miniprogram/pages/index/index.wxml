@@ -4,8 +4,7 @@
 
 <view class='middle-upword'>
   <view class='middle-upword-word'>
-    <text wx:if="{{logged}}" class='middle-upword-word-option'>点击下方按钮</text>
-    <text wx:if="{{!logged}}" class='middle-upword-word-option'>点击下方按钮登录</text>
+    <text class='middle-upword-word-option'>欢迎你，七日行者</text>
   </view>
 </view>
 <view class='middle-downword'>

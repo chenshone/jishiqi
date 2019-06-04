@@ -4,49 +4,19 @@ const app = getApp()
 Page({
 	data: {
     avatarUrl: '../../images/index/middle7.svg',
-		userInfo: {},
 		logged: false,
 		takeSession: false,
 		requestResult: ''
 	},
 
-	onLoad: function() {
-		// 获取用户信息
-		wx.getSetting({
-			success: res => {
-				if (res.authSetting['scope.userInfo']) {
-					// 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-					wx.getUserInfo({
-						success: res => {
-							this.setData({
-								logged: true,
-								avatarUrl: res.userInfo.avatarUrl,
-								userInfo: res.userInfo
-							})
-						}
-					});
-					//调用云函数,获取openId
-					wx.cloud.init();
-					wx.cloud.callFunction({
-						name: 'login',
-						data: {},
-						success: res => {
-							app.globalData.openid = res.result.openid;
-						}
-					});
-				}
-			}
-		});
-		
-	},
-
 	//获取用户信息
 	onGetUserInfoOrGoin: function(e) {
+    const self = this;
 		if (!this.logged && e.detail.userInfo) {
 			this.setData({
 				logged: true,
 				avatarUrl: e.detail.userInfo.avatarUrl,
-				userInfo: e.detail.userInfo
+        nickName: e.detail.userInfo.nickName
 			})
 			//调用云函数,获取openId
 			wx.cloud.init()
@@ -55,6 +25,8 @@ Page({
 				data: {},
 				success: res => {
 					app.globalData.openid = res.result.openid;
+          app.globalData.avatarUrl = self.data.avatarUrl;
+          app.globalData.nickName = self.data.nickName;
 				}
 			})
 		}
